@@ -1,0 +1,754 @@
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>> Konfidencial <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Common <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Colors <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>> Fonts <<<<<<<<<<<<<< */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #121212;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-moz-selection {
+  background: #c9a8825b;
+}
+
+::selection {
+  background: #c9a8825b;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 15px 0px 15px 0px;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* >>>> Navigations <<<< */
+  /* >>>>>> Left <<<<<< */
+  /* >>>>>> Center <<<<<< */
+  /* >>>>>> Right <<<<<< */
+}
+
+.navbar .nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #c9a882;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar .--navbar--left-- {
+  width: 30%;
+  padding-left: 192px;
+  margin-top: -80px;
+  position: relative;
+  /* >>>> Language Dropdown <<<< */
+  /* >>>> By default display/none <<<< */
+  /* >>>> Shown on Hover <<<< */
+}
+
+.navbar .--navbar--left-- .nav-link {
+  padding: 8px 12px;
+}
+
+.navbar .--navbar--left-- .--languages-- {
+  display: none;
+  position: absolute;
+  width: 60px;
+  background: #ffffff;
+  margin-left: 10px;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+.navbar .--navbar--left-- .--languages-- .nav-link {
+  padding: 7px 12px;
+  background: #f7f3ef;
+  color: rgba(0, 0, 0, 0.24);
+}
+
+.navbar .--navbar--left-- .--languages-- .nav-link:hover {
+  background: #ffffff;
+  color: #c9a882;
+}
+
+.navbar .--navbar--left-- .--languages-- .nav-link.active {
+  background: #ffffff;
+  color: #c9a882;
+}
+
+.navbar .--navbar--left-- .--languages-- i {
+  font-size: 8px;
+  padding-left: 5px;
+}
+
+.navbar .--navbar--left-- .nav-item.lang:hover .--languages-- {
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar .--navbar--center-- {
+  text-align: center;
+  width: 70%;
+}
+
+.navbar .--navbar--center-- .--center--list-- {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.navbar .--navbar--center-- .--center--list-- .nav-link {
+  padding: 0px 16px;
+}
+
+.navbar .--navbar--right-- {
+  width: 30%;
+  padding-top: 12px;
+  padding-right: 61px;
+  margin-top: -80px;
+}
+
+.navbar .--navbar--right-- input {
+  border: none;
+  outline: none;
+  width: 300px;
+  border-bottom: 1px solid rgba(154, 136, 2, 0.4);
+  background: transparent;
+  margin-right: 14px;
+}
+
+@media screen and (max-width: 1850px) {
+  .navbar .--navbar--left-- {
+    padding-left: 40px;
+  }
+  .navbar .--navbar--right-- {
+    padding-right: 40px;
+  }
+  .navbar .--navbar--right-- input {
+    width: 80%;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.carousel {
+  position: relative;
+  /* >>>> Gradient Overlay <<<< */
+  /* >>>> Carousel Indicators <<<< */
+  /* >>>> Content top of Carousel <<<< */
+}
+
+.carousel .--overlay-- {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(12%, rgba(0, 0, 0, 0.91)), color-stop(43%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.91) 12%, rgba(0, 0, 0, 0.5) 43%, rgba(0, 0, 0, 0.5));
+  z-index: 9;
+}
+
+.carousel .carousel-indicators {
+  margin-bottom: 45px;
+}
+
+.carousel .carousel-indicators li {
+  width: 31px;
+  height: 5px;
+  margin: 0 11px 0 0;
+  border-radius: 1.5px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.carousel .carousel-indicators li.active {
+  background-color: #c9a882;
+}
+
+.carousel .--banner--content-- {
+  position: absolute;
+  top: 58.5%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  z-index: 99;
+}
+
+.carousel .--banner--content-- h1 {
+  font-family: "Spectral", serif;
+  font-size: 3.01vw;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+.carousel .--banner--content-- h1 span {
+  color: #c9a882;
+}
+
+.carousel .--banner--content-- .--line-- {
+  width: 348px;
+  height: 2px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  background-color: #c9a882;
+}
+
+.carousel .--banner--content-- p {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1850px) {
+  .carousel .--banner--content-- {
+    /* removing br so text can wrap */
+  }
+  .carousel .--banner--content-- p br {
+    display: none;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Models <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.--escorts--portugal-- {
+  position: relative;
+  padding: 103px 40px 92px 40px;
+  text-align: center;
+  /* >>>> All Girls <<<< */
+}
+
+.--escorts--portugal-- h1 {
+  font-family: "Spectral", serif;
+  font-size: 35px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c9a882;
+}
+
+.--escorts--portugal-- .--all--girls-- {
+  /* >>>> Girls <<<< */
+  /* >>>> View All Button <<<< */
+}
+
+.--escorts--portugal-- .--all--girls-- .container {
+  max-width: 1288px;
+}
+
+.--escorts--portugal-- .--all--girls-- .container .col-lg-4 {
+  padding: 0px 44px 0px 44px;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  margin-top: 55px;
+  /* >>>> Girl Image <<<< */
+  /* >>>> Image Overlay Border <<<< */
+  /* >>>> Details About Girls <<<< */
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- img {
+  width: 100%;
+  height: 100%;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--image-- {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--image-- .--overlay-- {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls--:hover .--image-- .--overlay-- {
+  border: 5px solid #c9a882;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls--:hover .--details-- .--booking--details-- .--calender-- {
+  background: #c9a882;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls--:hover .--details-- .--booking--details-- .--calender-- svg .--calender--icon-- {
+  fill: #000000;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* >>>> Name/Location <<<< */
+  /* >>>> Booking Details <<<< */
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- .--name--and--location-- {
+  text-align: left;
+  width: 100%;
+  padding: 20px 0px 0px 0px;
+  /* >>>> Name <<<< */
+  /* >>>> Location <<<< */
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- .--name--and--location-- h3 {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  color: #c9a882;
+  margin: 0;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- .--name--and--location-- h2 {
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #c9a882;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- .--booking--details-- {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: right;
+  vertical-align: middle;
+  /* >>>> Calender Icon <<<< */
+  /* >>>> Calender Icon SVG <<<< */
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- .--booking--details-- .--calender-- {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  padding: 13px 12px 12px 13px;
+  border: 1px solid #c9a882;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- .--booking--details-- svg {
+  position: absolute;
+  top: 48%;
+  left: 50.3%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--escorts--portugal-- .--all--girls-- .--girls-- .--details-- .--booking--details-- svg .--calender--icon-- {
+  fill: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--escorts--portugal-- .--all--girls-- .--view--all-- {
+  width: 100%;
+  text-align: center;
+  margin-top: 55px;
+}
+
+.--escorts--portugal-- .--all--girls-- .--view--all-- a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  opacity: 0.6;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: #c9a882d2;
+  padding: 10px 27px;
+  border-bottom: 1px solid #c9a882d2;
+}
+
+@media screen and (max-width: 1600px) {
+  /* >>>> All Girls <<<< */
+  .--all--girls-- .container {
+    width: 90% !important;
+    /* Raducing padding along with width of device */
+  }
+  .--all--girls-- .container .col-lg-4 {
+    padding: 0px 2% 0px 2% !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  /* >>>> All Girls <<<< */
+  .--all--girls-- .container {
+    width: 100% !important;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>> Our Locations <<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.--locations-- {
+  position: relative;
+  width: 100%;
+  height: 854px;
+  background: url("../images/home/bg--1.webp");
+  background-position: center;
+  padding: 90px;
+}
+
+.--locations-- .container {
+  height: 100%;
+  /* >>>> Main Title <<<< */
+  /* >>>> Line <<<< */
+  /* >>>> All Locations (City) <<<< */
+  /* >>>> Paragraph <<<< */
+  /* >>>> View All Button <<<< */
+}
+
+.--locations-- .container h1 {
+  font-family: "Spectral", serif;
+  font-size: 58px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.--locations-- .container .--line-- {
+  width: 1px;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 32px;
+  margin-bottom: 38px;
+  background-color: #c9a882;
+}
+
+.--locations-- .container .--all--locations-- {
+  text-align: center;
+}
+
+.--locations-- .container .--all--locations-- a {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c9a882;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  margin: 5px;
+  line-height: 45px;
+  text-decoration: none;
+  border: solid 1px rgba(201, 168, 130, 0.5);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--locations-- .container .--all--locations-- a:hover {
+  color: #000000;
+  background: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--locations-- .container p {
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  margin-top: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.--locations-- .container .--view--all-- {
+  width: 100%;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.--locations-- .container .--view--all-- a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  opacity: 0.6;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-align: center;
+  color: #c9a882d2;
+  padding: 10px 27px;
+  border-bottom: 1px solid #c9a882d2;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>> About Us <<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.--about--us-- {
+  position: relative;
+  padding: 62px 0px 70px 0px;
+  width: 100%;
+}
+
+.--about--us-- .container {
+  max-width: 860px;
+  /* >>>>> Input responsible for <<<<< */
+  /* >>>>> toggling showText/hideText <<<<< */
+  /* >>>>> Question <<<<< */
+  /* >>>>> Hidden Text <<<<< */
+}
+
+.--about--us-- .container input[type="checkbox"] {
+  display: none;
+}
+
+.--about--us-- .container .--question-- {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  margin-top: 30px;
+  font-family: "Spectral", serif;
+  font-size: 24px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-transform: capitalize;
+  color: rgba(201, 168, 130, 0.6);
+}
+
+.--about--us-- .container .--question--::after {
+  float: right;
+  border-style: solid;
+  border-width: 1px 1px 0 0;
+  content: " ";
+  display: inline-block;
+  height: 10px;
+  left: 2px;
+  position: relative;
+  right: 20px;
+  top: 2px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  vertical-align: top;
+  width: 10px;
+}
+
+.--about--us-- .container .faq-drawer__content-wrapper {
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.--about--us-- .container .faq-drawer__content-wrapper p {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.88;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+/* >>>>> it will make sure that only check item display <<<<< */
+.--toggle--:checked + .--question-- + .faq-drawer__content-wrapper {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding-top: 30px;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.--toggle--:checked + .--question--::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.--toggle--:checked + .--question-- {
+  color: #c9a882;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Footer <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+footer {
+  position: relative;
+  width: 100%;
+  padding: 50px 0px;
+  background: #000000;
+  text-align: center;
+  /* >>>> Navigations <<<< */
+  /* >>>> Copyright <<<< */
+}
+
+footer ul {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0px 15px;
+}
+
+footer ul li a {
+  opacity: 0.7;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  color: #c9a882;
+}
+
+footer ul li a:hover {
+  text-decoration: none;
+  color: #c9a882;
+}
+
+footer .--copyright-- p {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  text-decoration: none;
+  color: #c9a882;
+  opacity: 0.55;
+  margin: 0;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>> Signature <<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.--signature-- {
+  position: fixed;
+  z-index: 999;
+  top: 76.5%;
+  right: 88px;
+  /* >>>>>>>> Animation <<<<<<< */
+}
+
+.--signature-- svg {
+  -webkit-animation: rotation 23s infinite linear;
+          animation: rotation 23s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+/*# sourceMappingURL=app.css.map */
