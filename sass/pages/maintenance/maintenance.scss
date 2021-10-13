@@ -1,0 +1,211 @@
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>> Konfidencial <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+
+/* >>>>>>>>>>>>>> Colors <<<<<<<<<<<<<< */
+/* >>> You change the whole theme <<<< */
+/* >>> by changing these colors <<<< */
+
+$bgcolor: #121212;
+$black: #000000;
+$white: #ffffff;
+$white05: rgba(255, 255, 255, 0.5);
+$golden: #c9a882;
+$golden04: #c9a8825b;
+$golden06: #c9a882d2;
+$sharpGolden: rgba(154, 136, 2, 0.4);
+$lightGolden: rgba(255, 255, 255, 0.45);
+
+/* >>>>>>>> Fonts Sizes <<<<<<<<< */
+
+:root {
+  --paragraph: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --paragraph: 14px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Common <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>> Font Family <<<<<<<<<<<<<< */
+/* >> Fonts are directly coming from fonts folder << */
+
+/* >>>>>>>>> Montserrat <<<<<<<<< */
+@import url("../../../fonts/Montserrat/stylesheet.css");
+
+/* >>>>>>>>> Spectral <<<<<<<<< */
+@import url("../../../fonts/Spectral/stylesheet.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("../../../sass/common/body/body.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("../../../sass/common/header/navbar.css");
+
+/* Hiding all the non required sections of header on Desktop  */
+.navbar {
+  .--navbar--left-- {
+    display: none;
+  }
+  .--navbar--right-- {
+    display: none;
+  }
+  .--navbar--center-- {
+    margin-top: 72px;
+    .--center--list-- {
+      display: none;
+    }
+  }
+}
+/* Showing all the sections of header back on Tablet/Mobile  */
+@media screen and (max-width: 1334px) {
+  .--navbar--left-- {
+    display: block !important;
+  }
+  .--navbar--right-- {
+    display: block !important;
+  }
+  .--navbar--center-- {
+    margin-top: 0px !important;
+    .--center--list-- {
+      display: block;
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("../../../sass/common/banner/banner.css");
+
+.--banner-- {
+  .--banner-overlay-- {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.91) 12%,
+      rgba(0, 0, 0, 0.5) 43%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  .--banner-content-- {
+    top: 50%;
+    left: 50%;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 99;
+
+    /* Main Heading */
+    h1 {
+      font-family: "Spectral";
+      font-size: 60px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      margin-bottom: 25px;
+      color: $golden;
+    }
+    /* Sub Heading */
+    h6 {
+      font-family: "Spectral";
+      font-size: 20px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 1px;
+      text-align: center;
+      margin-bottom: 37px;
+      color: $golden;
+    }
+    /* Paragraph */
+    p {
+      font-family: "Spectral";
+      font-size: 16px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.88;
+      letter-spacing: normal;
+      margin-bottom: 27px;
+      color: $golden;
+    }
+    /* Phone/Whatsapp/Email */
+    .container {
+      width: 1036px !important;
+      .row {
+        margin: 0;
+        padding: 0;
+        max-width: 1036px;
+        .col-lg-4 {
+          margin: 0;
+          text-align: center;
+          padding: 14px 0px;
+          border: 1px solid $golden;
+          transition: 0.5s;
+          cursor: pointer;
+          &.-phone {
+            border-left: none;
+          }
+          &.-email {
+            border-right: none;
+          }
+          a {
+            text-decoration: none;
+            color: unset;
+          }
+          span {
+            color: $golden;
+            transition: 0.3s;
+            svg {
+              .svg-fill {
+                fill: $golden;
+                transition: 0.3s;
+              }
+            }
+          }
+          &:hover {
+            background: $golden;
+            transition: 0.5s;
+            span {
+              color: $black;
+              transition: 0.3s;
+              svg {
+                .svg-fill {
+                  fill: $black;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
