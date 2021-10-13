@@ -1,0 +1,32 @@
+/* >>>>>>>>>>>>>> Colors <<<<<<<<<<<<<< */
+/* >>> You change the whole theme <<<< */
+/* >>> by changing these colors <<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #121212;
+  font-family: "Montserrat", sans-serif;
+}
+
+::-moz-selection {
+  background: #c9a8825b;
+}
+
+::selection {
+  background: #c9a8825b;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/*# sourceMappingURL=body.css.map */

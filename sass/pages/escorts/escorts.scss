@@ -1,0 +1,460 @@
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>> Konfidencial <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Common <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>> Colors <<<<<<<<<<<<<< */
+/* >>> You change the whole theme <<<< */
+/* >>> by changing these colors <<<< */
+
+$bgcolor: #121212;
+$black: #000000;
+$white: #ffffff;
+$golden: #c9a882;
+$golden04: #c9a8825b;
+$golden06: #c9a882d2;
+$sharpGolden: rgba(154, 136, 2, 0.4);
+$lightGolden: rgba(255, 255, 255, 0.45);
+$almostWhite: #d8d8d8;
+$inputBG: #242424;
+$messageError: #ce3737;
+
+/* >>>>>>>>>>>>>> Font Family <<<<<<<<<<<<<< */
+/* >> Fonts are directly coming from fonts folder << */
+
+/* >>>>>>>>> Montserrat <<<<<<<<< */
+@import url("../../../fonts/Montserrat/stylesheet.css");
+
+/* >>>>>>>>> Spectral <<<<<<<<< */
+@import url("../../../fonts/Spectral/stylesheet.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/body/body.css");
+
+body {
+  padding-top: 271px;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/header/navbar.css");
+
+.navbar {
+  .--navbar--left-- {
+    margin-top: -104px;
+  }
+  .--navbar--right-- {
+    margin-top: -106px;
+  }
+}
+@media screen and (max-width: 1334px) {
+  .navbar {
+    .--navbar--left-- {
+      margin-top: 0px;
+    }
+    .--navbar--right-- {
+      margin-top: 0px;
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/banner/banner.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>> Escort Details <<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.escort-details {
+  .container {
+    position: relative;
+    max-width: 1170px;
+    padding: 0;
+    .-left,
+    .-right {
+      padding: 0;
+    }
+    .-left {
+      max-width: 561px;
+      img {
+        width: 100%;
+        margin-top: 34px;
+        &:first-of-type {
+          margin-top: 0px;
+        }
+      }
+    }
+    .-right {
+      max-width: 687px;
+      .escort-about {
+        padding-left: 77px;
+        /* Go Back */
+        .-come-back {
+          width: 100%;
+          text-align: right;
+          a {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            text-decoration: none;
+            color: $golden;
+          }
+        }
+        /* Name */
+        .-name {
+          margin-bottom: 3px;
+          h1 {
+            font-family: "Spectral";
+            font-size: 35px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.29;
+            letter-spacing: normal;
+            color: $golden;
+          }
+        }
+        /* Location */
+        .-location {
+          margin-bottom: 19px;
+          p {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 2.14;
+            letter-spacing: normal;
+            color: $golden;
+            span {
+              text-transform: uppercase;
+              font-weight: 600;
+            }
+          }
+        }
+        /* Paragraph */
+        .-para {
+          margin-bottom: 10px;
+          overflow: hidden;
+          max-height: 65px;
+          transition: 0.25s ease-in-out;
+          p {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            color: $white;
+            margin-bottom: 10px;
+            &:last-of-type {
+              margin-bottom: 0px;
+            }
+          }
+          &.active {
+            transition: 0.25s ease-in-out;
+            max-height: fit-content;
+          }
+        }
+        /* Read More */
+        .-read-more {
+          span {
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            text-decoration: none;
+            color: $golden;
+          }
+        }
+        /* Phone/Whatsapp */
+        .-phone-whatsapp {
+          max-width: 100%;
+          margin: 33px 0px;
+          .row {
+            .col-lg-6 {
+              text-align: center;
+              border: 1px solid $golden;
+              &.col-left {
+                border-left: none;
+                border-right: none;
+              }
+              &.col-right {
+                border-right: none;
+              }
+              a {
+                text-decoration: none;
+                .-phone,
+                .-whatsapp {
+                  padding: 14px 10px;
+                  span {
+                    font-size: 18px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    color: $golden;
+                    transition: 0.3s;
+                    svg {
+                      .svg-fill {
+                        fill: $golden;
+                        transition: 0.3s;
+                      }
+                    }
+                  }
+                }
+              }
+              &:hover {
+                background: $golden;
+                transition: 0.4s;
+                a {
+                  .-phone,
+                  .-whatsapp {
+                    span {
+                      color: $black;
+                      transition: 0.3s;
+                      svg {
+                        .svg-fill {
+                          transition: 0.3s;
+                          fill: $black;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        /* More Information */
+        .more-info {
+          ul {
+            padding: 0;
+            list-style: none;
+            color: $white;
+            margin: 0;
+            margin-bottom: 25px;
+            li {
+              font-size: 14px;
+              font-weight: 600;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.57;
+              letter-spacing: normal;
+              color: $white;
+              span {
+                font-weight: normal;
+              }
+            }
+          }
+          p {
+            font-size: 14px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            color: $white;
+            margin: 0;
+            margin-bottom: 3px;
+            font-weight: 600;
+          }
+        }
+        /* Book Now */
+        .book-now {
+          margin: 40px 0px 50px 0px;
+          a {
+            text-decoration: none;
+            padding: 11px 40px;
+            background: $golden;
+            span {
+              font-size: 14px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              color: $black;
+              svg {
+                margin-top: -5px;
+                .svg-fill {
+                  fill: $black;
+                }
+              }
+            }
+          }
+        }
+        /* Categories */
+        .category {
+          p {
+            font-size: 12px;
+          }
+          ul {
+            li {
+              display: inline;
+              color: $golden;
+              a {
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.67;
+                letter-spacing: normal;
+                color: $golden;
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover {
+                  color: $white;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+        }
+        /* All Escorts-Names */
+        .all-escorts {
+          p {
+            font-size: 12px;
+          }
+          ul {
+            li {
+              display: inline;
+              color: $golden;
+              a {
+                font-size: 12px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.67;
+                letter-spacing: normal;
+                color: $golden;
+                text-decoration: none;
+                transition: 0.3s;
+                &:hover {
+                  color: $white;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+        }
+        /* Share More */
+        .-share {
+          cursor: pointer;
+          span {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            color: $golden;
+            svg {
+              margin-top: -5px;
+              .svg-fill {
+                fill: $golden;
+              }
+            }
+          }
+        }
+        /* All Services Bottom Text */
+        .all-service {
+          position: absolute;
+          bottom: 0;
+          p {
+            font-size: 12px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.67;
+            letter-spacing: normal;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>> Signature <<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/signature/signature.css");
+
+/* >>>>>>>> Signature position <<<<<<< */
+.--signature-- {
+  top: 389px;
+  right: 88px;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> Ads <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/ads/ads.css");
+
+.--ad-- {
+  margin-top: 74px;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Footer <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/footer/footer.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>> Login to Konfidential Pop Up <<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/login/login-pop-up.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

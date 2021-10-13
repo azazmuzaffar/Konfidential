@@ -1,0 +1,470 @@
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>> Konfidencial <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Common <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>> Colors <<<<<<<<<<<<<< */
+/* >>> You change the whole theme <<<< */
+/* >>> by changing these colors <<<< */
+
+$bgcolor: #121212;
+$black: #000000;
+$white: #ffffff;
+$golden: #c9a882;
+$golden04: #c9a8825b;
+$golden06: #c9a882d2;
+$sharpGolden: rgba(154, 136, 2, 0.4);
+$lightGolden: rgba(255, 255, 255, 0.45);
+$almostWhite: #d8d8d8;
+$inputBG: #242424;
+$messageError: #ce3737;
+
+/* >>>>>>>>>>>>>> Font Family <<<<<<<<<<<<<< */
+/* >> Fonts are directly coming from fonts folder << */
+
+/* >>>>>>>>> Montserrat <<<<<<<<< */
+@import url("../../../fonts/Montserrat/stylesheet.css");
+
+/* >>>>>>>>> Spectral <<<<<<<<< */
+@import url("../../../fonts/Spectral/stylesheet.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/body/body.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/header/navbar.css");
+
+.navbar {
+  .--navbar--left-- {
+    margin-top: -104px;
+  }
+  .--navbar--right-- {
+    margin-top: -106px;
+  }
+}
+@media screen and (max-width: 1334px) {
+  .navbar {
+    .--navbar--left-- {
+      margin-top: 0px;
+    }
+    .--navbar--right-- {
+      margin-top: 0px;
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/banner/banner.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>> Contact Konfidential <<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--contact-konfidential-- {
+  padding: 55px 20px 35px 20px;
+  .container {
+    padding: 0;
+    max-width: 1036px;
+    /* Main Heading and Back option */
+    .--contact-heading-- {
+      display: flex;
+      margin-bottom: 31px;
+      .--main-heading-- {
+        h1 {
+          font-family: "Spectral";
+          font-size: 35px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.29;
+          letter-spacing: normal;
+          color: #c9a882;
+        }
+      }
+      .--go-back-- {
+        float: right;
+        margin-left: auto;
+        margin-right: 0;
+        a {
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.57;
+          letter-spacing: normal;
+          color: $almostWhite;
+        }
+      }
+    }
+    /* Timing Paragraph */
+    .--timing-- {
+      p {
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        color: $white;
+        &:first-of-type {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    /* Phone/Whatsapp/Email */
+    .--contact--through-- {
+      margin: 38px 0px 68px 0px;
+      .row {
+        margin: 0;
+        padding: 0;
+        .col-lg-4 {
+          margin: 0;
+          text-align: center;
+          padding: 14px 0px;
+          border: 1px solid $golden;
+          transition: 0.5s;
+          cursor: pointer;
+          &.-phone {
+            border-left: none;
+          }
+          &.-email {
+            border-right: none;
+          }
+          a {
+            text-decoration: none;
+            color: unset;
+          }
+          span {
+            color: $golden;
+            transition: 0.3s;
+            svg {
+              .svg-fill {
+                fill: $golden;
+                transition: 0.3s;
+              }
+            }
+          }
+          &:hover {
+            background: $golden;
+            transition: 0.5s;
+            span {
+              color: $black;
+              transition: 0.3s;
+              svg {
+                .svg-fill {
+                  fill: $black;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Contact Form */
+    .--contact--form-- {
+      margin-bottom: 35px;
+      position: relative;
+      height: fit-content;
+      h2 {
+        font-family: "Spectral";
+        font-size: 24px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.25;
+        letter-spacing: normal;
+        color: #c9a882;
+      }
+      form {
+        .row {
+          margin: 0;
+          padding: 0;
+          .col-lg-6,
+          .col-lg-12 {
+            padding-left: 0;
+            margin-top: 21px;
+            padding: 0;
+          }
+          .col-lg-6 {
+            margin: 0;
+            &:first-of-type,
+            &:nth-child(3) {
+              padding-right: 30px;
+            }
+          }
+          /* label */
+          label {
+            font-size: 12px;
+            font-weight: 300;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.67;
+            letter-spacing: normal;
+            color: $white;
+            padding: 0;
+          }
+          /* input/textarea */
+          input,
+          textarea {
+            width: 100%;
+            display: block;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.57;
+            letter-spacing: normal;
+            color: $golden;
+            border: none;
+            outline: none;
+            background: transparent;
+            background: $inputBG;
+            padding: 12px 10px;
+            &::placeholder {
+              color: $golden06;
+            }
+          }
+          /* input borderon error */
+          input {
+            &.error {
+              border: 1px solid $messageError;
+            }
+          }
+          textarea {
+            height: 115px;
+          }
+          /* Error Message */
+          .error-message {
+            font-size: 12px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.67;
+            margin-top: 5px;
+            letter-spacing: normal;
+            color: $messageError;
+          }
+          input[type="submit"] {
+            font-size: 14px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            margin: 0 auto;
+            cursor: pointer;
+            color: $black;
+            width: 213px;
+            padding: 8px 0px;
+            text-transform: uppercase;
+            background-color: $golden06;
+            transition: 0.6s;
+            &:hover {
+              background-color: $golden;
+              transition: 0.6s;
+            }
+          }
+          .all-conditions-required {
+            margin-top: 25px;
+            p {
+              font-size: 12px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.67;
+              letter-spacing: normal;
+              color: $white;
+              margin: 0;
+            }
+          }
+        }
+        /* Custom Checkbox */
+        .required-checkbox {
+          position: relative;
+          .checkbox {
+            input {
+              position: absolute;
+              opacity: 0;
+              height: 0;
+              width: 0;
+              &:checked ~ .checkmark:after {
+                border: solid $golden;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+            }
+            .checkmark {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 25px;
+              width: 25px;
+              background-color: $inputBG;
+              cursor: pointer;
+              &::after {
+                content: "";
+                position: absolute;
+              }
+              &:after {
+                left: 8px;
+                bottom: 6px;
+                width: 8px;
+                height: 16px;
+                border: solid $golden04;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+            }
+            .conditions {
+              margin-left: 40px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>> Confirmation Message <<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.--confirmation-message-- {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: 99999;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: $golden;
+  .--content-- {
+    text-align: center;
+    position: relative;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .--confirmed--icon-- {
+      position: relative;
+      margin: 0 auto;
+      width: 115px;
+      height: 115px;
+      border: solid 1px #c9a882;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      svg {
+        width: 54px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .--text-- {
+      margin-bottom: 42px;
+      p {
+        font-size: 16px;
+        line-height: 1.88;
+      }
+    }
+    .--confirmed-- {
+      span {
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        text-decoration: none;
+        color: $golden;
+      }
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>> Signature <<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/signature/signature.css");
+
+/* >>>>>>>> Signature position <<<<<<< */
+.--signature-- {
+  top: 389px;
+  right: 88px;
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> Ads <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/ads/ads.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Footer <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/footer/footer.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>> Login to Konfidential Pop Up <<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+@import url("/sass/common/login/login-pop-up.css");
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

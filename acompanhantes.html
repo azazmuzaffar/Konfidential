@@ -6,7 +6,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
     <!-- >>> Title & Favicon <<< -->
-    <title>Konfidential</title>
+    <title>Acompanhantes | Konfidential</title>
     <link rel="shortcut icon" type="image/jpg" href="./images/logo/favicon.svg" />
 
     <!-- >>> meta Description <<< -->
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
 
     <!-- >>> Custom CSS <<< -->
-    <link rel="stylesheet" href="./sass/app.css" />
+    <link rel="stylesheet" href="./sass/pages/acompanhantes/acompanhantes.css" />
   </head>
   <body>
     <!-- >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< -->
@@ -47,6 +47,7 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item lang">
             <span class="nav-link">PT &nbsp; <i class="fas fa-chevron-down"></i></span>
+
             <!-- >>>>>>>> Languages <<<<<<< -->
             <ul class="--languages-- navbar-nav">
               <!-- >>>>>>>> Languages # 1 [ Active ] <<<<<<< -->
@@ -81,7 +82,7 @@
       <div class="--navbar--center-- mx-auto order-0">
         <!-- >>>>>>>> Logo <<<<<<< -->
         <div class="--logo--">
-          <a class="navbar-brand mx-auto" href="./index.html">
+          <a class="navbar-brand mx-auto" href="#">
             <span>Menu</span>
             <div class="svg-container">
               <img src="./images/logo/logo.svg" alt="logo" />
@@ -100,7 +101,7 @@
         </div>
         <!-- >>>>>>>> Navigations <<<<<<< -->
         <ul class="--center--list-- navbar-nav">
-          <li class="nav-item drop-it">
+          <li class="nav-item drop-it active">
             <a class="nav-link" href="./acompanhantes.html"
               >ACOMPANHANTES <i class="fas fa-chevron-down"></i>
             </a>
@@ -126,6 +127,10 @@
             <a class="nav-link" href="./contactos.html">contactos</a>
           </li>
         </ul>
+        <!-- >>>>>>>> Pages Direction <<<<<<< -->
+        <div class="--page-direction--">
+          <span><a href="./index.html">Home</a><span>/</span>Acompanhantes</span>
+        </div>
       </div>
       <!-- >>>>>>>> Right <<<<<<< -->
       <div class="--navbar--right-- navbar-collapse collapse w-40">
@@ -154,63 +159,17 @@
     </nav>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
-    <!-- >>>>>>>>>> Banner Carousel <<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-      <!-- >>>>>>>> Gradient Overlay <<<<<<< -->
-      <div class="--overlay--"></div>
-
-      <!-- >>>>>>> Slider Indicators <<<<<<< -->
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      </ol>
-
-      <!-- >>>>>>>> Carousel <<<<<<< -->
-      <div class="carousel-inner">
-        <!-- >>>> ::active by default <<<<<-->
-
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-        <!-- >>>> Carousel # 1 <<<< -->
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-
-        <div class="carousel-item active">
-          <picture>
-            <source media="(max-width:500px)" srcset="./images/home/banner--slide--1.2.jpg" />
-            <source media="(max-width:800px)" srcset="./images/home/banner--slide--1.1.jpg" />
-            <img class="d-block w-100" src="./images/home/banner--slide--1.jpg" alt="First slide" />
-          </picture>
-        </div>
-        <!-- >>>>>>>>>>>> End <<<<<<<<<<<< -->
-
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-        <!-- >>>> Carousel # 2 <<<< -->
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-
-        <div class="carousel-item">
-          <picture>
-            <source media="(max-width:500px)" srcset="./images/home/banner--slide--1.2.jpg" />
-            <source media="(max-width:800px)" srcset="./images/home/banner--slide--1.1.jpg" />
-            <img class="d-block w-100" src="./images/home/banner--slide--1.jpg" alt="First slide" />
-          </picture>
-        </div>
-        <!-- >>>>>>>>>>>> End <<<<<<<<<<<< -->
+    <div class="--banner--">
+      <div class="--banner-bg--">
+        <img src="./images/acompanhantes/banner-desk.jpg" alt="banner" />
       </div>
-
-      <!-- >>>>>>> Content Top of Crousel <<<<<<< -->
-      <div class="--banner--content--">
-        <!-- >>>>>>>>>>>> Main Heading <<<<<<<<<<<< -->
-        <h1>Bem-vindo à <span>Konfidencial</span>.com</h1>
-        <!-- >>>>>>>>>>>> Line <<<<<<<<<<<< -->
-        <div class="--line--"></div>
-        <!-- >>>>>>>>>>>> Paragraph <<<<<<<<<<<< -->
-        <p>
-          Acompanhantes de Luxo no Algarve, Almada, Aveiro, Açores, Braga, Carnaxide, Cascais,
-          Coimbra, Évora, Guimarães, <br />
-          Leiria, Lisboa, Madeira, Montijo, Odivelas, Oeiras, Porto, Santarém, Setúbal, Sintra, Vila
-          Real e Viseu.
-        </p>
+      <div class="--banner-overlay--"></div>
+      <div class="--banner-content--">
+        <h1>Diretório de referência em Portugal</h1>
+        <div class="--ver-line--"></div>
       </div>
     </div>
 
@@ -219,6 +178,29 @@
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
     <div class="--escorts--portugal--">
+      <!-- Adding Dropdown and Back option -->
+      <div class="--select-or-go-back-- container">
+        <div class="--select-city--">
+          <div class="dropdown">
+            <div class="select">
+              <span>Algarve</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <input type="hidden" name="gender" />
+            <ul class="dropdown-menu">
+              <li>Porto</li>
+              <li>Lisboa</li>
+              <li>Coimbra</li>
+              <li>Braga</li>
+              <li>Alentejo</li>
+            </ul>
+          </div>
+        </div>
+        <div class="--go-back--">
+          <a href="./index.html"><i class="fas fa-chevron-left"></i> &nbsp; VOLTAR</a>
+        </div>
+      </div>
+
       <!-- >>>> Title <<<< -->
 
       <h1>Acompanhantes Portugal</h1>
@@ -243,7 +225,9 @@
                     <img src="./images/girls/1.jpg" alt="JOANNA from PORTO" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
                     <div class="--name--and--location--">
@@ -252,6 +236,7 @@
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>PORTO</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -282,19 +267,24 @@
               <a href="./escorts/joanna-silva.html">
                 <div class="--girls-- --girl--">
                   <!-- >>>> Girl Images <<<< -->
+
                   <div class="--image--">
                     <img src="./images/girls/2.jpg" alt="ALINE from MATOSINHOS" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>ALINE</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>MATOSINHOS</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -325,19 +315,24 @@
               <a href="./escorts/joanna-silva.html">
                 <div class="--girls-- --girl--">
                   <!-- >>>> Girl Images <<<< -->
+
                   <div class="--image--">
                     <img src="./images/girls/3.jpg" alt="PAOLA DIAS from VISEU" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>PAOLA DIAS</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>VISEU</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -368,19 +363,25 @@
               <a href="./escorts/joanna-silva.html">
                 <div class="--girls-- --girl--">
                   <!-- >>>> Girl Images <<<< -->
+
                   <div class="--image--">
                     <img src="./images/girls/1.jpg" alt="JOANNA from PORTO" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
+
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>JOANNA</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>PORTO</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -411,19 +412,25 @@
               <a href="./escorts/joanna-silva.html">
                 <div class="--girls-- --girl--">
                   <!-- >>>> Girl Images <<<< -->
+
                   <div class="--image--">
                     <img src="./images/girls/2.jpg" alt="ALINE from MATOSINHOS" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
+
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>ALINE</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>MATOSINHOS</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -458,15 +465,20 @@
                     <img src="./images/girls/3.jpg" alt="PAOLA DIAS from VISEU" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
+
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>PAOLA DIAS</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>VISEU</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -497,19 +509,25 @@
               <a href="./escorts/joanna-silva.html">
                 <div class="--girls-- --girl--">
                   <!-- >>>> Girl Images <<<< -->
+
                   <div class="--image--">
                     <img src="./images/girls/1.jpg" alt="JOANNA from PORTO" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
+
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>JOANNA</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>PORTO</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -540,19 +558,25 @@
               <a href="./escorts/joanna-silva.html">
                 <div class="--girls-- --girl--">
                   <!-- >>>> Girl Images <<<< -->
+
                   <div class="--image--">
                     <img src="./images/girls/2.jpg" alt="ALINE from MATOSINHOS" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
+
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>ALINE</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>MATOSINHOS</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -585,19 +609,24 @@
               <a href="./escorts/joanna-silva.html">
                 <div class="--girls-- --girl--">
                   <!-- >>>> Girl Images <<<< -->
+
                   <div class="--image--">
                     <img src="./images/girls/3.jpg" alt="PAOLA DIAS from VISEU" />
                     <div class="--overlay--"></div>
                   </div>
+
                   <!-- >>>> All the details about Girl <<<< -->
+
                   <div class="--details--">
                     <!-- >>>> Name & Location <<<< -->
                     <div class="--name--and--location--">
                       <!-- >>>> Name <<<< -->
                       <div class="--name--"><h3>PAOLA DIAS</h3></div>
+
                       <!-- >>>> Location <<<< -->
                       <div class="--location--"><h2>VISEU</h2></div>
                     </div>
+
                     <!-- >>>> Booking Details <<<< -->
                     <div class="--booking--details--">
                       <!-- >>>> Calender Icon <<<< -->
@@ -619,9 +648,13 @@
             </div>
             <!-- >>>>>>> End <<<<<< -->
 
-            <!-- >>>>>>> View All Girls <<<<<< -->
-            <div class="--view--all--">
-              <a href="./acompanhantes.html">Ver Todas</a>
+            <!-- >>>>>>> Finishing Text <<<<<< -->
+            <div class="--finishing-text--">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at interdum
+                metus. Integer et quam odio. Morbi fermentum Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.
+              </p>
             </div>
           </div>
         </div>
@@ -629,186 +662,14 @@
     </div>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
-    <!-- >>>>>>>>>>> Our Locations <<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>> Ads <<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
-    <div class="--locations--">
-      <div class="container">
-        <h1>
-          Viva os seus desejos, com <br />
-          acompanhantes discretos e <br />
-          exclusivos de Portugal.
-        </h1>
-        <div class="--line--"></div>
-        <div class="--all--locations--">
-          <!-- >>> First Row <<<-->
-          <a href="#">porto</a>
-          <a href="#">aveiro</a>
-          <a href="#">algarve</a>
-          <a href="#">lisboa</a>
-          <a href="#">matosinhos</a>
-          <a href="#">coimbra</a>
-          <a href="#">algarve</a>
-          <a href="#">lisboa</a>
-          <a href="#">matosinhos</a>
-
-          <br />
-
-          <!-- >>> Second Row <<<-->
-          <a href="#">porto</a>
-          <a href="#">aveiro</a>
-          <a href="#">algarve</a>
-          <a href="#">lisboa</a>
-          <a href="#">matosinhos</a>
-          <a href="#">coimbra</a>
-          <a href="#">algarve</a>
-          <a href="#">lisboa</a>
-
-          <br />
-
-          <!-- >>> Third Row <<<-->
-          <a href="#">porto</a>
-          <a href="#">aveiro</a>
-          <a href="#">algarve</a>
-          <a href="#">lisboa</a>
-          <a href="#">matosinhos</a>
-          <a href="#">coimbra</a>
-          <a href="#">algarve</a>
-          <a href="#">lisboa</a>
-          <a href="#">matosinhos</a>
-        </div>
-        <p>
-          Navegue pelas nossas localizações de acompanhantes e verá que temos uma fantástica seleção
-          de acompanhantes para <br />
-          sua diversão, prontas para satisfazer seus desejos mais profundos.
-        </p>
-
-        <!-- >>>>>>> View All Girls <<<<<< -->
-        <div class="--view--all--">
-          <a href="./localizações.html">Ver Todas</a>
-        </div>
+    <a href="#">
+      <div class="--ad-- container">
+        <img src="./images/acompanhantes/ad-bg.jpg" alt="acompanhantes" />
       </div>
-    </div>
-
-    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
-    <!-- >>>>>>>> About Konfidencial <<<<<<<< -->
-    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
-
-    <div class="--about--us--">
-      <div class="container">
-        <!-- >>>>>>> All Frequently Asked Question <<<<<< -->
-        <div class="--frequently--asked--question--">
-          <!-- >>>>>>> Each --f-a-q--1-- have each question <<<<<< -->
-
-          <!-- >>>>>>> Question # 1 <<<<<< -->
-          <div class="--f-a-q-- --f-a-q--1-">
-            <input class="--toggle-- active" id="faq-drawer" type="checkbox" />
-            <!-- >>>>>>> Question <<<<<< -->
-            <label class="--question--" for="faq-drawer">Bem vindo (a) à Konfidencial!  </label>
-            <!-- >>>>>>> Answer <<<<<< -->
-            <div class="faq-drawer__content-wrapper">
-              <div class="faq-drawer__content">
-                <p>
-                  A Konfidencial é um site que disponibiliza anúncios publicitários de acompanhantes
-                  de luxo, tendo sempre como objectivo a realização dos seus sonhos. 
-                </p>
-                <p>
-                  Caracterizámo-nos pela exclusividade, discrição, confidencialidade, e
-                  credibilidade. <br />
-                   Com estas características, temos como objectivo um público alvo capaz de estar à
-                  altura do que se apresenta. A Konfidencial vem assim afirmar-se e diferenciar-se
-                  no mercado das demais empresas do mesmo sector, sendo uma nova era. 
-                </p>
-                <p>
-                  Quem nunca desejou desfrutar de boa companhia, por pouco tempo que fosse? Todos
-                  nós ambicionamos ter alguém ao seu lado e que desperte todos os nossos sentidos e
-                  nos transmita sensações positivas.  Lembre-se que a felicidade é feita de pequenos
-                  e grandes momentos de êxtase. <br />
-                   Torne os seus dias mais leves, e desfrute da vida em boa companhia, pois é esse o
-                  objectivo da Konfidencial, tornando-nos uma caixinha de sonhos. 
-                </p>
-                <p>Assim é a Konfidencial: irreverente! </p>
-              </div>
-            </div>
-          </div>
-          <!-- >>>>>>> End <<<<<< -->
-
-          <!-- >>>>>>> Question # 2 <<<<<< -->
-          <div class="--f-a-q-- --f-a-q--2--">
-            <input class="--toggle--" id="faq-drawer-2" type="checkbox" />
-
-            <!-- >>>>>>> Question <<<<<< -->
-            <label class="--question--" for="faq-drawer-2"
-              >Vivamus sed risus posuere, fermentum mauris</label
-            >
-            <!-- >>>>>>> Answer <<<<<< -->
-            <div class="faq-drawer__content-wrapper">
-              <div class="faq-drawer__content">
-                <p>
-                  A Konfidencial é um site que disponibiliza anúncios publicitários de acompanhantes
-                  de luxo, tendo sempre como objectivo a realização dos seus sonhos. 
-                </p>
-                <p>
-                  Caracterizámo-nos pela exclusividade, discrição, confidencialidade, e
-                  credibilidade. <br />
-                   Com estas características, temos como objectivo um público alvo capaz de estar à
-                  altura do que se apresenta. A Konfidencial vem assim afirmar-se e diferenciar-se
-                  no mercado das demais empresas do mesmo sector, sendo uma nova era. 
-                </p>
-                <p>
-                  Quem nunca desejou desfrutar de boa companhia, por pouco tempo que fosse? Todos
-                  nós ambicionamos ter alguém ao seu lado e que desperte todos os nossos sentidos e
-                  nos transmita sensações positivas. <br />
-                  Lembre-se que a felicidade é feita de pequenos e grandes momentos de êxtase. <br />
-                   Torne os seus dias mais leves, e desfrute da vida em boa companhia, pois é esse o
-                  objectivo da Konfidencial, tornando-nos uma caixinha de sonhos. 
-                </p>
-                <p>Assim é a Konfidencial: irreverente! </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- >>>>>>> End <<<<<< -->
-
-          <!-- >>>>>>> Question # 3 <<<<<< -->
-          <div class="--f-a-q-- --f-a-q--3--">
-            <!-- Input responsible for toggling showText/hideText  -->
-            <input class="--toggle--" id="faq-drawer-3" type="checkbox" />
-
-            <!-- >>>>>>> Question <<<<<< -->
-            <label class="--question--" for="faq-drawer-3"
-              >Vivamus sed risus posuere, fermentum mauris</label
-            >
-            <!-- >>>>>>> Answer <<<<<< -->
-            <div class="faq-drawer__content-wrapper">
-              <div class="faq-drawer__content">
-                <p>
-                  A Konfidencial é um site que disponibiliza anúncios publicitários de acompanhantes
-                  de luxo, tendo sempre como objectivo a realização dos seus sonhos. 
-                </p>
-                <p>
-                  Caracterizámo-nos pela exclusividade, discrição, confidencialidade, e
-                  credibilidade. <br />
-                   Com estas características, temos como objectivo um público alvo capaz de estar à
-                  altura do que se apresenta. A Konfidencial vem assim afirmar-se e diferenciar-se
-                  no mercado das demais empresas do mesmo sector, sendo uma nova era. 
-                </p>
-                <p>
-                  Quem nunca desejou desfrutar de boa companhia, por pouco tempo que fosse? Todos
-                  nós ambicionamos ter alguém ao seu lado e que desperte todos os nossos sentidos e
-                  nos transmita sensações positivas. <br />  Lembre-se que a felicidade é feita de
-                  pequenos e grandes momentos de êxtase. <br />
-                   Torne os seus dias mais leves, e desfrute da vida em boa companhia, pois é esse o
-                  objectivo da Konfidencial, tornando-nos uma caixinha de sonhos. 
-                </p>
-                <p>Assim é a Konfidencial: irreverente! </p>
-              </div>
-            </div>
-          </div>
-          <!-- >>>>>>> End <<<<<< -->
-        </div>
-      </div>
-    </div>
+    </a>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>> Footer <<<<<<<<<<<<< -->
@@ -819,7 +680,7 @@
         <!-- >>>>>>> Navigations <<<<<< -->
         <div class="--pages--">
           <ul>
-            <li><a href="./acompanhantes.html">ACOMPANHANTES</a></li>
+            <li><a href="./acompanhantes.html" class="active">ACOMPANHANTES</a></li>
             <li><a href="./localizações.html">localizações</a></li>
             <li><a href="./blog.html">Blog</a></li>
             <li><a href="./sobre-a-konfidential.html">sobre a Konfidencial</a></li>
@@ -828,7 +689,7 @@
         </div>
         <!-- >>>>>>>> Copyright <<<<<<< -->
         <div class="--copyright--">
-          <p>©Konfidencial, 2021 All Rights Reserved.</p>
+          <p href="#">©Konfidencial, 2021 All Rights Reserved.</p>
         </div>
       </div>
     </footer>

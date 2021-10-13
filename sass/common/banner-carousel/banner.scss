@@ -1,0 +1,229 @@
+/* >>>>>>>>>>>>>> Colors <<<<<<<<<<<<<< */
+/* >>> You change the whole theme <<<< */
+/* >>> by changing these colors <<<< */
+
+$bgcolor: #121212;
+$black: #000000;
+$white: #ffffff;
+$golden: #c9a882;
+$golden04: #c9a8825b;
+$golden06: #c9a882d2;
+$sharpGolden: rgba(154, 136, 2, 0.4);
+$lightGolden: rgba(255, 255, 255, 0.45);
+
+/* >>>>>>>> Fonts Sizes <<<<<<<<< */
+
+:root {
+  --paragraph: 16px;
+}
+$navigations: 14px;
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --paragraph: 14px;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+
+  /* >>>> Gradient Overlay <<<< */
+  .--overlay-- {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.91) 12%,
+      rgba(0, 0, 0, 0.5) 43%,
+      rgba(0, 0, 0, 0.5)
+    );
+    z-index: 9;
+  }
+
+  /* >>>> Carousel Indicators <<<< */
+  .carousel-indicators {
+    margin-bottom: 38px;
+    li {
+      width: 31px;
+      height: 5px;
+      margin: 0 11px 0 0;
+      border-radius: 1.5px;
+      background-color: $lightGolden;
+    }
+    li.active {
+      background-color: $golden;
+    }
+  }
+
+  /* >>>> Content top of Carousel <<<< */
+  .--banner--content-- {
+    position: absolute;
+    top: 58.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $white;
+    z-index: 9;
+    h1 {
+      font-family: "Spectral", serif;
+      font-size: 3.01vw;
+      font-weight: 200;
+      font-stretch: normal;
+      font-style: italic;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      margin-bottom: 5px;
+      span {
+        color: $golden;
+      }
+    }
+    .--line-- {
+      width: 348px;
+      height: 2px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      background-color: $golden;
+    }
+    p {
+      font-size: var(--paragraph);
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.88;
+      letter-spacing: normal;
+      text-align: center;
+      color: $white;
+    }
+  }
+}
+
+@media screen and (max-width: 1850px) {
+  .carousel {
+    .--banner--content-- {
+      /* removing br so text can wrap */
+      p {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1334px) {
+  .carousel {
+    position: relative;
+    height: 901px;
+    /* >>>> Carousel Indicators <<<< */
+    .carousel-indicators {
+      margin-bottom: 90px;
+    }
+
+    /* >>>> Crousel Image <<<< */
+    .carousel-inner {
+      .carousel-item {
+        img {
+          width: 1920px !important;
+          background-position: center center;
+          height: 901px;
+        }
+      }
+    }
+
+    /* >>>> Content top of Carousel <<<< */
+    .--banner--content-- {
+      width: 100%;
+      padding: 0px 18% 0px 18%;
+      top: 50%;
+      h1 {
+        font-size: 40px;
+      }
+      .--line-- {
+        background-color: #979797;
+      }
+      p {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .carousel {
+    /* >>>> Gradient Overlay <<<< */
+    .--overlay-- {
+      height: 100vh;
+    }
+
+    /* >>>> Crousel Image <<<< */
+    .carousel-inner {
+      .carousel-item {
+        img {
+          width: 800px !important;
+          height: 100vh;
+        }
+      }
+    }
+
+    /* >>>> Content top of Carousel <<<< */
+    .--banner--content-- {
+      top: 50.5%;
+      padding: 0px 13% 0px 13%;
+      h1 {
+        font-size: 45px;
+        margin-bottom: 20px !important;
+      }
+      .--line-- {
+        background-color: #979797;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .carousel {
+    height: 661px;
+
+    /* >>>> Carousel Indicators <<<< */
+    .carousel-indicators {
+      margin-bottom: 38px;
+    }
+
+    /* >>>> Content top of Carousel <<<< */
+    .--banner--content-- {
+      top: 52%;
+      padding: 0px 20px 0px 20px;
+      h1 {
+        line-height: 1.22;
+        margin-bottom: 16px !important;
+      }
+      .--line-- {
+        width: 218px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* >>>> Crousel Image <<<< */
+  .carousel-inner {
+    .carousel-item {
+      img {
+        max-width: 100% !important;
+        height: 661px !important;
+      }
+    }
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
