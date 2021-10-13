@@ -62,7 +62,8 @@
           </li>
           <!-- >>>>>>>> Login <<<<<<< -->
           <li class="nav-item login">
-            <a class="nav-link" href="#">
+            <!-- >>>>>>>> "make-login" is responsible for showing Login POP UP <<<<<<< -->
+            <a class="nav-link make-login" href="#">
               <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fill-rule="evenodd">
                   <path d="M0 0h24v24H0z" />
@@ -81,7 +82,7 @@
       <div class="--navbar--center-- mx-auto order-0">
         <!-- >>>>>>>> Logo <<<<<<< -->
         <div class="--logo--">
-          <a class="navbar-brand mx-auto" href="#">
+          <a class="navbar-brand mx-auto" href="./index.html">
             <span>Menu</span>
             <div class="svg-container">
               <img src="./images/logo/logo.svg" alt="logo" />
@@ -101,7 +102,9 @@
         <!-- >>>>>>>> Navigations <<<<<<< -->
         <ul class="--center--list-- navbar-nav">
           <li class="nav-item drop-it">
-            <a class="nav-link" href="#">ACOMPANHANTES <i class="fas fa-chevron-down"></i> </a>
+            <a class="nav-link" href="./acompanhantes.html"
+              >ACOMPANHANTES <i class="fas fa-chevron-down"></i>
+            </a>
             <ul>
               <li><a href="#">Porto</a></li>
               <li><a href="#">Lisboa</a></li>
@@ -112,16 +115,16 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">localizações</a>
+            <a class="nav-link" href="./localizações.html">localizações</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">blog</a>
+            <a class="nav-link" href="./blog.html">blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">sobre a Konfidencial</a>
+            <a class="nav-link" href="./sobre-a-konfidential.html">sobre a Konfidencial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">contactos</a>
+            <a class="nav-link" href="./contactos.html">contactos</a>
           </li>
         </ul>
         <!-- >>>>>>>> Pages Direction <<<<<<< -->
@@ -244,11 +247,11 @@
         <!-- >>>>>>> Navigations <<<<<< -->
         <div class="--pages--">
           <ul>
-            <li><a href="#">ACOMPANHANTES</a></li>
-            <li><a href="#">localizações</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">sobre a Konfidencial</a></li>
-            <li><a href="#">contactos</a></li>
+            <li><a href="./acompanhantes.html">ACOMPANHANTES</a></li>
+            <li><a href="./localizações.html">localizações</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./sobre-a-konfidential.html">sobre a Konfidencial</a></li>
+            <li><a href="./contactos.html">contactos</a></li>
           </ul>
         </div>
         <!-- >>>>>>>> Copyright <<<<<<< -->
@@ -273,6 +276,56 @@
           opacity=".497"
         />
       </svg>
+    </div>
+
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>> Login <<<<<<<<<<<<<<< -->
+    <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
+
+    <div class="pop-up login-to-konfidential">
+      <div class="pop-up-contant">
+        <div class="inner-content">
+          <p>Konfidencial Login</p>
+          <form action="">
+            <!-- get Email -->
+            <div class="fetch-email">
+              <label for="Email">Email</label>
+              <input type="Email" placeholder="Insira o email" required />
+            </div>
+            <!-- get Password -->
+            <div class="fetch-password">
+              <label for="password">Password</label>
+              <input type="password" placeholder="***********" required />
+              <!-- Eye icon responsible for showing password -->
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                  <path d="M0 0h24v24H0z" />
+                  <path
+                    d="M12 6c5.437 0 9.694 5.74 9.873 5.985a.66.66 0 0 1 0 .778c-.179.244-4.436 5.984-9.873 5.984-5.228 0-9.365-5.307-9.835-5.932l-.038-.052a.66.66 0 0 1 0-.779l.038-.052C2.635 11.307 6.772 6 12 6zm0 1.319c-4.014 0-7.475 3.808-8.5 5.054C4.525 13.62 7.994 17.43 12 17.43c4.014 0 7.475-3.808 8.5-5.055-1.027-1.246-4.495-5.055-8.5-5.055zm0 1.099a3.96 3.96 0 0 1 3.956 3.956A3.96 3.96 0 0 1 12 16.33a3.96 3.96 0 0 1-3.956-3.956A3.96 3.96 0 0 1 12 8.418zm0 1.318a2.64 2.64 0 0 0-2.637 2.638A2.64 2.64 0 0 0 12 15.01a2.64 2.64 0 0 0 2.637-2.637A2.64 2.64 0 0 0 12 9.736z"
+                    fill="#000"
+                  />
+                </g>
+              </svg>
+            </div>
+            <!-- Submit info -->
+            <div class="form-submission">
+              <input type="submit" value="ENTRAR" />
+            </div>
+          </form>
+          <!-- Clode Login Pop Up -->
+          <div class="--close-login--">
+            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd" opacity=".65">
+                <path d="M0 0h24v24H0z" />
+                <path
+                  class="icon"
+                  d="m13.414 12 6.364 6.364-1.414 1.414L12 13.414l-6.364 6.364-1.414-1.414L10.586 12 4.222 5.636l1.414-1.414L12 10.586l6.364-6.364 1.414 1.414z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- >>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<< -->

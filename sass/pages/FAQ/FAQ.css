@@ -16,18 +16,18 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-@import url("/sass/common/body/body.css");
+@import url("../../../sass/common/body/body.css");
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-@import url("/sass/common/header/navbar.css");
-@import url("/sass/common/FAQ/FAQ.css");
-@import url("/sass/common/signature/signature.css");
-@import url("/sass/common/footer/footer.css");
-@import url("/sass/common/login/login-pop-up.css");
+@import url("../../../sass/common/header/navbar.css");
+@import url("../../../sass/common/FAQ/FAQ.css");
+@import url("../../../sass/common/signature/signature.css");
+@import url("../../../sass/common/footer/footer.css");
+@import url("../../../sass/common/login/login-pop-up.css");
 .navbar .--navbar--left-- {
   margin-top: -104px;
 }

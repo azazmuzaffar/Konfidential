@@ -16,9 +16,9 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-@import url("/sass/common/body/body.css");
-@import url("/sass/common/header/navbar.css");
-@import url("/sass/common/footer/footer.css");
+@import url("../../../sass/common/body/body.css");
+@import url("../../../sass/common/header/navbar.css");
+@import url("../../../sass/common/footer/footer.css");
 body {
   background: #efefef;
 }

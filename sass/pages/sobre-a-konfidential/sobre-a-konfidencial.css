@@ -7,13 +7,13 @@
 /* >>>>>>>> Fonts Sizes <<<<<<<<< */
 @import url("../../../fonts/Montserrat/stylesheet.css");
 @import url("../../../fonts/Spectral/stylesheet.css");
-@import url("/sass/common/body/body.css");
-@import url("/sass/common/header/navbar.css");
-@import url("/sass/common/banner/banner.css");
-@import url("/sass/common/papular-locations/locations.css");
-@import url("/sass/common/signature/signature.css");
-@import url("/sass/common/footer/footer.css");
-@import url("/sass/common/login/login-pop-up.css");
+@import url("../../../sass/common/body/body.css");
+@import url("../../../sass/common/header/navbar.css");
+@import url("../../../sass/common/banner/banner.css");
+@import url("../../../sass/common/papular-locations/locations.css");
+@import url("../../../sass/common/signature/signature.css");
+@import url("../../../sass/common/footer/footer.css");
+@import url("../../../sass/common/login/login-pop-up.css");
 :root {
   --paragraph: 16px;
 }

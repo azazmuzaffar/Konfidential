@@ -45,7 +45,7 @@ $lightGolden: rgba(255, 255, 255, 0.45);
 /* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
-@import url("/sass/common/body/body.css");
+@import url("../../../sass/common/body/body.css");
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
@@ -55,7 +55,7 @@ $lightGolden: rgba(255, 255, 255, 0.45);
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
-@import url("/sass/common/header/navbar.css");
+@import url("../../../sass/common/header/navbar.css");
 
 /* Hiding all the non required sections of header on Desktop  */
 .navbar {
@@ -96,7 +96,7 @@ $lightGolden: rgba(255, 255, 255, 0.45);
 /* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
-@import url("/sass/common/banner/banner.css");
+@import url("../../../sass/common/banner/banner.css");
 
 .--banner-- {
   .--banner-overlay-- {

@@ -36,7 +36,7 @@ $bodygray: #efefef;
 /* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
-@import url("/sass/common/body/body.css");
+@import url("../../../sass/common/body/body.css");
 
 body {
   background: $bodygray;
@@ -50,7 +50,7 @@ body {
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
-@import url("/sass/common/header/navbar.css");
+@import url("../../../sass/common/header/navbar.css");
 
 /* Changing hover colors to black as header bg is white now */
 
@@ -332,7 +332,7 @@ body {
 /* >>>>>>>>>>>>>> Footer <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
-@import url("/sass/common/footer/footer.css");
+@import url("../../../sass/common/footer/footer.css");
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
