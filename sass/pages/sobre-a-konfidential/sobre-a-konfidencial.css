@@ -63,8 +63,25 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-.--banner-content-- {
+.--banner-- .--banner-content-- {
   bottom: 109px;
+}
+
+@media screen and (max-width: 768px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 76px;
+  }
+  .--banner-- .--banner-content-- h1 br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 65px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -80,7 +97,6 @@
 
 .--sobre-a-konfidential-- .container {
   max-width: 100%;
-  padding: 0;
   /* >>>> Content <<<< */
 }
 
@@ -88,20 +104,20 @@
   /* >>>> Lef and Right Image <<<< */
 }
 
-.--sobre-a-konfidential-- .container .row .col-lg-3 {
+.--sobre-a-konfidential-- .container .row .col-xl-3 {
   position: relative;
   margin: 0;
   padding: 0;
   z-index: 99;
 }
 
-.--sobre-a-konfidential-- .container .row .col-lg-3 .--left--image-- {
+.--sobre-a-konfidential-- .container .row .col-xl-3 .--left--image-- {
   position: absolute;
   left: 0;
   bottom: -178px;
 }
 
-.--sobre-a-konfidential-- .container .row .col-lg-3 .--right--image-- {
+.--sobre-a-konfidential-- .container .row .col-xl-3 .--right--image-- {
   position: absolute;
   right: 0;
   bottom: -373px;
@@ -110,8 +126,6 @@
 .--sobre-a-konfidential-- .container .--the-text-- {
   max-width: 823px;
   margin: 0 auto;
-  margin-left: 40px;
-  margin-right: 40px;
 }
 
 .--sobre-a-konfidential-- .container .--the-text-- h1 {
@@ -170,6 +184,52 @@
   transition: 0.3s;
 }
 
+@media screen and (max-width: 1700px) {
+  .--sobre-a-konfidential-- .container .row {
+    /* >>>> Lef and Right Image <<<< */
+  }
+  .--sobre-a-konfidential-- .container .row .col-xl-3 .--left--image-- {
+    bottom: -178px;
+  }
+  .--sobre-a-konfidential-- .container .row .col-xl-3 .--left--image-- img {
+    width: 300px;
+  }
+  .--sobre-a-konfidential-- .container .row .col-xl-3 .--right--image-- {
+    width: 300px;
+    bottom: -303px;
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .--sobre-a-konfidential-- .container {
+    max-width: 100%;
+  }
+  .--sobre-a-konfidential-- .container .row {
+    /* >>>> Lef and Right Image <<<< */
+  }
+  .--sobre-a-konfidential-- .container .row .col-xl-3 {
+    display: none;
+  }
+  .--sobre-a-konfidential-- .container .--the-text-- {
+    max-width: 570px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--sobre-a-konfidential-- {
+    padding: 81px 40px 65px 40px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--sobre-a-konfidential-- {
+    padding: 44px 0px 60px 0px;
+  }
+  .--sobre-a-konfidential-- .container .--the-text-- h1 {
+    font-size: 24px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -180,6 +240,9 @@
   height: 759px;
   padding: 78px 0px 85px 0px;
   background: url("../../../images/sobre-a-konfidential/location-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .--locations-- .container .--line-- {
@@ -201,6 +264,12 @@
   border-color: #ffffff;
 }
 
+@media screen and (max-width: 700px) {
+  .--locations-- {
+    height: 860px !important;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -210,7 +279,14 @@
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 570px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

@@ -52,6 +52,7 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 .terms-and-conditions {
   padding: 302px 20px 68px 20px;
+  min-height: calc(100vh - 157px);
 }
 
 .terms-and-conditions .container {
@@ -108,6 +109,34 @@
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 1334px) {
+  .terms-and-conditions {
+    padding: 202px 99px 68px 99px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .terms-and-conditions {
+    padding: 202px 99px 68px 99px;
+  }
+  .terms-and-conditions .container h1 {
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .terms-and-conditions {
+    padding: 174px 20px 68px 20px;
+  }
+  .terms-and-conditions .container h1 {
+    margin-bottom: 60px;
+    font-size: 35px;
+  }
+  .terms-and-conditions .container .--terms-- .term h2 {
+    font-size: 20px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -117,7 +146,14 @@
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 401px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

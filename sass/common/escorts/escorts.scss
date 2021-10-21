@@ -321,7 +321,12 @@ $lightGolden: rgba(255, 255, 255, 0.45);
       font-style: normal;
       line-height: 1.57;
       letter-spacing: normal;
-      color: #c9a882;
+      color: $golden;
+      transition: 0.3s;
+      &:hover {
+        transition: 0.3s;
+        color: $white;
+      }
     }
   }
   .--select-city-- {
@@ -380,6 +385,27 @@ $lightGolden: rgba(255, 255, 255, 0.45);
         i {
           transform: rotate(-180deg);
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--select-or-go-back-- {
+    margin-bottom: 40px;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--select-or-go-back-- {
+    .--go-back-- {
+      display: none;
+    }
+    .--select-city-- {
+      width: 100%;
+      .dropdown {
+        width: 100%;
       }
     }
   }

@@ -105,6 +105,24 @@ $messageError: #ce3737;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .--banner-- {
+    .--banner-content-- {
+      top: unset;
+      bottom: 113px;
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-- {
+    .--banner-content-- {
+      top: unset;
+      bottom: 69px;
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -251,6 +269,7 @@ $messageError: #ce3737;
             text-align: center;
             padding: 14px 0px;
             border: 1px solid $golden;
+            border-right: none;
             transition: 0.5s;
             cursor: pointer;
             &.-phone {
@@ -288,20 +307,167 @@ $messageError: #ce3737;
               }
             }
           }
+          text-align: center;
+          .advertise-here {
+            margin-top: 55px;
+            a {
+              font-size: 14px;
+              font-weight: 500;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: normal;
+              text-decoration: none;
+              text-transform: uppercase;
+              text-align: center;
+              color: $black;
+              padding: 11px 90px;
+              background: $golden06;
+              transition: 0.3s;
+              &:hover {
+                background: $golden;
+                transition: 0.3s;
+              }
+            }
+          }
         }
       }
     }
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .--contact-konfidential-- {
+    padding: 100px 50px 87px 50px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .--contact-konfidential-- {
+    padding: 100px 100px 87px 100px;
     .container.how {
       .--steps-- {
+        display: block;
         .col-lg-4 {
+          max-width: 100%;
+          padding: 5px 0px 30px 33px;
           margin-top: 67px;
           &:first-of-type {
             margin-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .--contact-konfidential-- {
+    .container {
+      /* Phone/Whatsapp/Email */
+      .--contact--through-- {
+        .row {
+          justify-content: center;
+          .col-lg-4 {
+            max-width: 171px;
+            &.-email {
+              border-right: none;
+              max-width: 226px !important;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--contact-konfidential-- {
+    padding: 81px 94px 60px 94px;
+    .container.how {
+      margin-bottom: 68px;
+      h3 {
+        display: none;
+      }
+      .--steps-- {
+        margin-top: 110px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .--contact-konfidential-- {
+    padding: 81px 40px 60px 40px;
+    .container {
+      /* Phone/Whatsapp/Email */
+      .--contact--through-- {
+        .row {
+          justify-content: center;
+          display: block;
+          .col-lg-4 {
+            max-width: 100%;
+            border-left: none !important;
+            border-bottom: none !important;
+            &.-email {
+              max-width: 100% !important;
+              border-bottom: 1px solid $golden !important;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--contact-konfidential-- {
+    padding: 44px 20px 60px 20px;
+    .container.how {
+      margin-bottom: 60px;
+      h1 {
+        font-size: 24px;
+      }
+      .--steps-- {
+        margin-top: 90px;
+        padding: 0px 20px 0px 40px;
+        .col-lg-4 {
+          margin-top: 51px;
+          .--step-- {
+            .--number-- {
+              position: absolute;
+              top: -51px;
+              left: -26px;
+              width: 51px;
+              height: 51px;
+              .-number {
+                span {
+                  font-size: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .container.why {
+      .--why-konfidential-- {
+        /* heading */
+        h2 {
+          font-size: 20px;
+        }
+        .advertise-here {
+          margin-top: 40px !important;
+          background: $golden;
+          a {
+            display: block;
+            width: 100%;
           }
         }
       }
@@ -322,7 +488,14 @@ $messageError: #ce3737;
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 574px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

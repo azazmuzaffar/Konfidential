@@ -164,7 +164,11 @@
 
     <div class="--banner--">
       <div class="--banner-bg--">
-        <img src="./images/announcements/banner-desk.jpg" alt="banner" />
+        <picture>
+          <source media="(max-width:375px)" srcset="./images/announcements/banner-mob.jpg" />
+          <source media="(max-width:768px)" srcset="./images/announcements/banner-tab.jpg" />
+          <img src="./images/announcements/banner-desk.jpg" alt="banner" />
+        </picture>
       </div>
       <div class="--banner-overlay--"></div>
       <div class="--banner-content--">
@@ -206,7 +210,7 @@
             </div>
           </div>
           <div class="col-lg-4">
-            <div class="--step-- step2">
+            <div class="--step-- step-2">
               <div class="--number--">
                 <div class="-number">
                   <span>2</span>
@@ -304,6 +308,10 @@
                     <span>konfidencial.pt@gmail.com</span>
                   </div>
                 </a>
+              </div>
+              <!-- Advertise here -->
+              <div class="advertise-here col-lg-12">
+                <a href="#">Anuncie aqui</a>
               </div>
             </div>
           </div>

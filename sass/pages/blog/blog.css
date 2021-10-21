@@ -57,6 +57,20 @@ body {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.91) 12%, rgba(0, 0, 0, 0.5) 43%, rgba(0, 0, 0, 0.5));
 }
 
+@media screen and (max-width: 768px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 136px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 157px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -261,6 +275,30 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .--konfidential-blogs-- {
+    padding: 65px 20px 70px 20px;
+  }
+  .--konfidential-blogs-- .container .row .dot-flashing {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--konfidential-blogs-- {
+    padding: 35px 5px 70px 5px;
+  }
+  .--konfidential-blogs-- .container h1 {
+    font-size: 24px;
+  }
+  .--konfidential-blogs-- .container .row .col-lg-4 {
+    margin-top: 39px;
+  }
+  .--konfidential-blogs-- .container .row .col-lg-4:first-of-type {
+    margin-top: 30px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -270,7 +308,14 @@ body {
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 389px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

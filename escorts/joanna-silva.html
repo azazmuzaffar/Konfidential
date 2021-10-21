@@ -206,14 +206,16 @@
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at interdum
                   metus. Integer et quam odio. Morbi fermentum Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Pellentesque at interdum metus. Integer et quam odio.
+                  consectetur adipiscing elit. Aadipiscing elit. Pellentesque at interdum metus.
+                  Integer et quam odio. Morbi fermentum Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit. Pellentesque at interdum metus. Integer et quam odio.
                 </p>
               </div>
               <!-- Back -->
               <div class="-read-more">
                 <span
-                  ><span class="switch-text">LER MAIS</span> &nbsp;&nbsp;
-                  <i class="fas fa-chevron-right"></i
+                  ><span id="switch-text">LER MAIS</span> &nbsp;&nbsp;
+                  <i class="fas fa-chevron-down"></i
                 ></span>
               </div>
               <!-- Phone/Whatsapp -->
@@ -358,7 +360,7 @@
               </div>
               <!-- Share -->
               <div class="-share">
-                <span>
+                <span class="-show-icons">
                   <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fill-rule="evenodd">
                       <path d="M0 0h24v24H0z" />
@@ -370,6 +372,20 @@
                   </svg>
                   &nbsp; PARTILHAR
                 </span>
+                <!-- Share On -->
+                <div class="share-on">
+                  <ul>
+                    <li>
+                      <a href="#"><i class="fas fa-envelope"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fas fa-phone"></i></a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </li>
+                  </ul>
+                </div>
               </div>
               <!-- All Service -->
               <div class="all-service">
@@ -385,11 +401,15 @@
     <!-- >>>>>>>>>>>>>>>> Ads <<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
-    <a href="#">
-      <div class="--ad-- container">
-        <img src="../images/contactos/ad-desk.jpg" alt="acompanhantes" />
-      </div>
-    </a>
+    <div class="--ad-- container">
+      <a href="#">
+        <picture>
+          <source media="(max-width:375px)" srcset="../images/escorts/ad-mob.jpg" />
+          <source media="(max-width:768px)" srcset="../images/escorts/ad-tab.png" />
+          <img src="../images/escorts/ad-desk.jpg" alt="ads" />
+        </picture>
+      </a>
+    </div>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>> Footer <<<<<<<<<<<<< -->

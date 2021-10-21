@@ -39,6 +39,7 @@
     margin-top: -106px;
   }
 }
+
 @media screen and (max-width: 1334px) {
   .navbar {
     .--navbar--left-- {
@@ -59,6 +60,20 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
 @import url("../../../sass/common/banner/banner.css");
+
+@media screen and (max-width: 768px) {
+  .--banner-content-- {
+    top: unset;
+    bottom: 106px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-content-- {
+    top: unset;
+    bottom: 97px;
+  }
+}
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
@@ -94,6 +109,33 @@
   line-height: 25px;
 }
 
+@media screen and (max-width: 768px) {
+  /* >>>> All Girls <<<< */
+  .--escorts--portugal-- {
+    position: relative;
+    padding: 93px 40px 65px 40px;
+    text-align: center;
+    h1 {
+      margin-bottom: 10px;
+    }
+  }
+  /* >>>> Finishing Text <<<< */
+  .--finishing-text-- {
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  /* >>>> All Girls <<<< */
+  .--escorts--portugal-- {
+    padding: 50px 10px 39px 10px;
+  }
+  /* >>>> Finishing Text <<<< */
+  .--finishing-text-- {
+    padding: 0px 10px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -107,7 +149,14 @@
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 389px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

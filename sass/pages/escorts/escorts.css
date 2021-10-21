@@ -120,6 +120,14 @@ body {
   letter-spacing: normal;
   text-decoration: none;
   color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.escort-details .container .-right .escort-about .-come-back a:hover {
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .escort-details .container .-right .escort-about .-name {
@@ -197,6 +205,20 @@ body {
   letter-spacing: normal;
   text-decoration: none;
   color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.escort-details .container .-right .escort-about .-read-more span i {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.escort-details .container .-right .escort-about .-read-more.active span i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .escort-details .container .-right .escort-about .-phone-whatsapp {
@@ -310,6 +332,8 @@ body {
   text-decoration: none;
   padding: 11px 40px;
   background: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .escort-details .container .-right .escort-about .book-now a span {
@@ -319,6 +343,8 @@ body {
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: #000000;
 }
 
@@ -328,6 +354,26 @@ body {
 
 .escort-details .container .-right .escort-about .book-now a span svg .svg-fill {
   fill: #000000;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.escort-details .container .-right .escort-about .book-now a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #000000;
+}
+
+.escort-details .container .-right .escort-about .book-now a:hover span {
+  color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.escort-details .container .-right .escort-about .book-now a:hover span svg .svg-fill {
+  fill: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .escort-details .container .-right .escort-about .category p {
@@ -387,6 +433,9 @@ body {
 }
 
 .escort-details .container .-right .escort-about .-share {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   cursor: pointer;
 }
 
@@ -397,7 +446,10 @@ body {
   font-style: normal;
   line-height: 1.57;
   letter-spacing: normal;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   color: #c9a882;
+  display: in;
 }
 
 .escort-details .container .-right .escort-about .-share span svg {
@@ -406,6 +458,56 @@ body {
 
 .escort-details .container .-right .escort-about .-share span svg .svg-fill {
   fill: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.escort-details .container .-right .escort-about .-share span:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #ffffff;
+}
+
+.escort-details .container .-right .escort-about .-share span:hover svg .svg-fill {
+  fill: #ffffff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.escort-details .container .-right .escort-about .-share .share-on {
+  display: none;
+}
+
+.escort-details .container .-right .escort-about .-share .share-on ul {
+  list-style: none;
+  margin: 30px 12px;
+  -webkit-animation: mymove 0.7s;
+  animation: mymove 0.7s;
+}
+
+.escort-details .container .-right .escort-about .-share .share-on ul li {
+  display: inline;
+  padding: 0px 10px;
+}
+
+.escort-details .container .-right .escort-about .-share .share-on ul li a {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: #c9a882;
+}
+
+.escort-details .container .-right .escort-about .-share .share-on ul li a i {
+  font-size: 25px;
+}
+
+.escort-details .container .-right .escort-about .-share .share-on ul li a:hover {
+  color: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.escort-details .container .-right .escort-about .-share .share-on.active {
+  display: block;
 }
 
 .escort-details .container .-right .escort-about .all-service {
@@ -423,6 +525,32 @@ body {
   color: #ffffff;
 }
 
+@-webkit-keyframes mymove {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -431,8 +559,15 @@ body {
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
-  top: 389px;
-  right: 88px;
+  top: 659px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -443,6 +578,7 @@ body {
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 .--ad-- {
   margin-top: 74px;
+  max-width: 1200px;
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

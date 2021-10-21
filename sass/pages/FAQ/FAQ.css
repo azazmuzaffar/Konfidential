@@ -52,7 +52,8 @@
 /* >>>>>>>>>>>>>>>> FAQ <<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 .--about--us-- {
-  padding: 302px 20px 80px 20px;
+  min-height: calc(100vh - 157px);
+  padding: 302px 20px 70px 20px;
 }
 
 .--about--us-- .container {
@@ -112,6 +113,34 @@
   margin: 15px 0px;
 }
 
+@media screen and (max-width: 1334px) {
+  .--about--us-- {
+    padding: 202px 99px 70px 99px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--about--us-- {
+    padding: 202px 99px 60px 99px;
+  }
+  .--about--us-- .container h1 {
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--about--us-- {
+    padding: 174px 20px 60px 20px;
+  }
+  .--about--us-- .container h1 {
+    font-size: 35px;
+    margin-bottom: 58px;
+  }
+  .--about--us-- .container .--frequently--asked--question-- .--f-a-q-- .--question-- {
+    font-size: 20px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -121,7 +150,14 @@
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 401px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

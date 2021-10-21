@@ -164,7 +164,11 @@
 
     <div class="--banner--">
       <div class="--banner-bg--">
-        <img src="./images//locations/banner-desk.jpg" alt="banner" />
+        <picture>
+          <source media="(max-width:375px)" srcset="./images/locations/banner-mob.jpg" />
+          <source media="(max-width:768px)" srcset="./images/locations/banner-tab.jpg" />
+          <img src="./images/locations/banner-desk.jpg" alt="banner" />
+        </picture>
       </div>
       <div class="--banner-overlay--"></div>
       <div class="--banner-content--">

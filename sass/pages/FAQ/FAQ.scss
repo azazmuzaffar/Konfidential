@@ -77,7 +77,8 @@ $messageError: #ce3737;
 @import url("../../../sass/common/FAQ/FAQ.css");
 
 .--about--us-- {
-  padding: 302px 20px 80px 20px;
+  min-height: calc(100vh - 157px);
+  padding: 302px 20px 70px 20px;
   .container {
     padding: 0;
     max-width: 1035px;
@@ -130,6 +131,42 @@ $messageError: #ce3737;
   }
 }
 
+@media screen and (max-width: 1334px) {
+  .--about--us-- {
+    padding: 202px 99px 70px 99px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--about--us-- {
+    padding: 202px 99px 60px 99px;
+    .container {
+      h1 {
+        margin-bottom: 75px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--about--us-- {
+    padding: 174px 20px 60px 20px;
+    .container {
+      h1 {
+        font-size: 35px;
+        margin-bottom: 58px;
+      }
+      .--frequently--asked--question-- {
+        .--f-a-q-- {
+          .--question-- {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -143,7 +180,14 @@ $messageError: #ce3737;
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 401px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

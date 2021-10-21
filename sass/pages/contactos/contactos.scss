@@ -76,6 +76,20 @@ $messageError: #ce3737;
 
 @import url("../../../sass/common/banner/banner.css");
 
+@media screen and (max-width: 768px) {
+  .--banner-content-- {
+    top: unset;
+    bottom: 136px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-content-- {
+    top: unset;
+    bottom: 148px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -118,6 +132,11 @@ $messageError: #ce3737;
           line-height: 1.57;
           letter-spacing: normal;
           color: $almostWhite;
+          transition: 0.3s;
+          &:hover {
+            color: $golden;
+            transition: 0.3s;
+          }
         }
       }
     }
@@ -147,6 +166,7 @@ $messageError: #ce3737;
           text-align: center;
           padding: 14px 0px;
           border: 1px solid $golden;
+          border-right: none;
           transition: 0.5s;
           cursor: pointer;
           &.-phone {
@@ -356,6 +376,124 @@ $messageError: #ce3737;
   }
 }
 
+@media screen and (max-width: 1334px) {
+  .--contact-konfidential-- {
+    padding: 55px 100px 35px 100px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .--contact-konfidential-- {
+    .container {
+      /* Phone/Whatsapp/Email */
+      .--contact--through-- {
+        .row {
+          justify-content: center;
+          .col-lg-4 {
+            max-width: 171px;
+            &.-email {
+              border-right: none;
+              max-width: 226px !important;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--contact-konfidential-- {
+    padding: 81px 100px 25px 100px;
+    .container {
+      .--contact-heading-- {
+        /* Display none on tab */
+        .--go-back-- {
+          display: none;
+        }
+      }
+      /* Contact form */
+      .--contact--form-- {
+        form {
+          .row {
+            .col-lg-6 {
+              &:first-of-type,
+              &:nth-child(3) {
+                padding-right: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .--contact-konfidential-- {
+    padding: 44px 80px 20px 80px;
+    .container {
+      /* Main Heading */
+      .--contact-heading-- {
+        margin-bottom: 21px;
+        .--main-heading-- {
+          h1 {
+            font-size: 24px;
+          }
+        }
+      }
+      /* Phone/Whatsapp/Email */
+      .--contact--through-- {
+        .row {
+          justify-content: center;
+          display: block;
+          .col-lg-4 {
+            max-width: 100%;
+            border-left: none;
+            border-bottom: none;
+            &.-email {
+              max-width: 100% !important;
+              border-bottom: 1px solid $golden;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      /* Contact form */
+      .--contact--form-- {
+        form {
+          .row {
+            .col-lg-6,
+            .col-lg-12 {
+              margin-top: 16px;
+            }
+            .col-lg-6 {
+              &:first-of-type,
+              &:nth-child(3) {
+                padding-right: 0px;
+              }
+            }
+            .error-message {
+              margin: 5px 0px 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--contact-konfidential-- {
+    padding: 44px 20px 20px 20px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -380,6 +518,7 @@ $messageError: #ce3737;
     top: 37%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: fit-content;
     .--confirmed--icon-- {
       position: relative;
       margin: 0 auto;
@@ -419,6 +558,21 @@ $messageError: #ce3737;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .--confirmation-message-- {
+    .--content-- {
+      padding: 0px 30px;
+      .--text-- {
+        p {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -432,7 +586,14 @@ $messageError: #ce3737;
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 389px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

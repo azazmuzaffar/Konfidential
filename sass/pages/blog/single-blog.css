@@ -61,6 +61,23 @@ body {
   bottom: 45px;
 }
 
+@media screen and (max-width: 768px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 106px;
+  }
+  .--banner-- .--banner-content-- h1 br {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 97px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -69,6 +86,31 @@ body {
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 .--konfidential-blog-- {
   padding: 100px 20px;
+}
+
+.--konfidential-blog-- .container.come-back {
+  max-width: 1020px;
+  text-align: right;
+  margin-bottom: 21px;
+}
+
+.--konfidential-blog-- .container.come-back a {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: #000;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--konfidential-blog-- .container.come-back a:hover {
+  color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .--konfidential-blog-- .container {
@@ -183,6 +225,22 @@ body {
   margin-left: auto;
 }
 
+@media screen and (max-width: 768px) {
+  .--konfidential-blog-- {
+    padding: 65px 20px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--konfidential-blog-- {
+    padding: 44px 0px 65px 0px;
+  }
+  .--konfidential-blog-- .container .title h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -191,8 +249,15 @@ body {
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
-  top: 389px;
-  right: 88px;
+  top: 401px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

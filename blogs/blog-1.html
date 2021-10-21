@@ -167,7 +167,11 @@
 
     <div class="--banner--">
       <div class="--banner-bg--">
-        <img src="../images/blog/banner-desk.jpg" alt="banner" />
+        <picture>
+          <source media="(max-width:375px)" srcset="../images/blog/banner-mob.jpg" />
+          <source media="(max-width:768px)" srcset="../images/blog/banner-tab.jpg" />
+          <img src="../images/blog/banner-desk.jpg" alt="banner" />
+        </picture>
       </div>
       <div class="--banner-overlay--"></div>
       <div class="--banner-content--">
@@ -185,6 +189,9 @@
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
     <div class="--konfidential-blog--">
+      <div class="come-back container">
+        <a href="#"><i class="fas fa-chevron-left"></i> &nbsp; VOLTAR</a>
+      </div>
       <div class="container">
         <!-- >>>>>>>> Blog Title <<<<<<< -->
         <div class="title">

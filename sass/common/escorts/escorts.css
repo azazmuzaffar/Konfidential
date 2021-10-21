@@ -324,6 +324,14 @@
   line-height: 1.57;
   letter-spacing: normal;
   color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--select-or-go-back-- .--go-back-- a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #ffffff;
 }
 
 .--select-or-go-back-- .--select-city-- .dropdown {
@@ -392,6 +400,25 @@
 .--select-or-go-back-- .--select-city-- .dropdown.active i {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
+}
+
+@media screen and (max-width: 768px) {
+  .--select-or-go-back-- {
+    margin-bottom: 40px;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--select-or-go-back-- .--go-back-- {
+    display: none;
+  }
+  .--select-or-go-back-- .--select-city-- {
+    width: 100%;
+  }
+  .--select-or-go-back-- .--select-city-- .dropdown {
+    width: 100%;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

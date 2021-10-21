@@ -60,7 +60,8 @@ body {
 /* >>>>>> My Ads - Private Area <<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 .--my-ads-- {
-  padding: 302px 20px 130px 20px;
+  padding: 302px 20px 80px 20px;
+  min-height: calc(100vh - 100px);
 }
 
 .--my-ads-- .container {
@@ -86,11 +87,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 50px;
-}
-
-.--my-ads-- .container .row:last-of-type {
-  margin-bottom: 0px;
+  padding-bottom: 50px;
 }
 
 .--my-ads-- .container .row .col-lg-5,
@@ -113,7 +110,9 @@ body {
 
 .--my-ads-- .container .row .col-lg-7 .--details-- {
   width: 100%;
-  height: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .--my-ads-- .container .row .col-lg-7 .--details-- h2 {
@@ -139,7 +138,7 @@ body {
 .--my-ads-- .container .row .col-lg-7 .--details-- .--ads-info-- .-expire-date {
   width: 50%;
   padding: 15px 25px;
-  border: 1px solid black;
+  border: 1px solid #979797;
 }
 
 .--my-ads-- .container .row .col-lg-7 .--details-- .--ads-info-- .-views p,
@@ -189,6 +188,15 @@ body {
   letter-spacing: normal;
   padding: 11px 35px;
   background: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .renew-add a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #000000;
+  color: #c9a882;
 }
 
 .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .request-change a {
@@ -197,6 +205,129 @@ body {
   line-height: 1.57;
   letter-spacing: normal;
   color: unset;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .request-change a:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #c9a882;
+}
+
+@media screen and (max-width: 1024px) {
+  .--my-ads-- {
+    padding: 252px 40px 125px 40px;
+  }
+  .--my-ads-- .container {
+    /* Main Heading */
+    /* Content Area */
+  }
+  .--my-ads-- .container h1 {
+    margin-bottom: 80px;
+  }
+  .--my-ads-- .container .row .col-lg-5 {
+    max-width: 100%;
+  }
+  .--my-ads-- .container .row .col-lg-7 {
+    max-width: 100%;
+    padding: 0px 0px 10px 25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .--my-ads-- {
+    padding: 202px 40px 20px 40px;
+  }
+  .--my-ads-- .container {
+    /* Main Heading */
+    /* Content Area */
+  }
+  .--my-ads-- .container h1 {
+    margin-bottom: 75px;
+  }
+  .--my-ads-- .container .row {
+    padding-top: 55px;
+    border-top: 1px solid #c9a882;
+  }
+  .--my-ads-- .container .row:first-of-type {
+    padding-top: 0px;
+    padding-bottom: 55px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .--my-ads-- {
+    padding: 194px 40px 60px 40px;
+  }
+  .--my-ads-- .container {
+    /* Main Heading */
+    /* Content Area */
+  }
+  .--my-ads-- .container h1 {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 60px;
+  }
+  .--my-ads-- .container .row {
+    padding: 30px 0px 0px;
+  }
+  .--my-ads-- .container .row:first-of-type {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    border: none;
+  }
+  .--my-ads-- .container .row .col-lg-7 {
+    max-width: 100%;
+    padding: 21px 0px 10px 0px;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- h2 {
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--ads-info-- {
+    margin: 20px 0px 20px 0px;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--ads-info-- .-views p,
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--ads-info-- .-expire-date p {
+    font-size: 14px;
+    line-height: 1.58;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .renew-add,
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .request-change {
+    width: 50%;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .renew-add a,
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .request-change a {
+    display: block;
+    text-align: center;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .renew-add {
+    margin: 0px;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .renew-add a {
+    padding: 11px 0px;
+    width: 100%;
+  }
+  .--my-ads-- .container .row .col-lg-7 .--details-- .--actions-- .request-change a span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--my-ads-- {
+    padding: 194px 20px 80px 20px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -289,9 +420,16 @@ body {
   width: 213px;
   padding: 8px 0px;
   text-transform: uppercase;
-  background-color: #c9a882d2;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  background-color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.pop-up.request-accessed .pop-up-contant .inner-content form input[type="submit"]:hover {
+  background-color: #000000;
+  color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .pop-up.request-accessed .pop-up-contant .inner-content .--close-pop-up-- {
@@ -303,6 +441,36 @@ body {
 
 .pop-up.request-accessed .pop-up-contant .inner-content .--close-pop-up-- svg .icon {
   fill: #000000;
+}
+
+@media screen and (max-width: 650px) {
+  .pop-up.request-accessed {
+    /* Main Area */
+  }
+  .pop-up.request-accessed .pop-up-contant {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .pop-up.request-accessed .pop-up-contant .inner-content {
+    padding: 8% 2%;
+    /* Form */
+    /* Close Pop Up Icon */
+  }
+  .pop-up.request-accessed .pop-up-contant .inner-content p {
+    padding: 0px 40px;
+    margin-bottom: 20px;
+  }
+  .pop-up.request-accessed .pop-up-contant .inner-content form {
+    /* Textarea */
+  }
+  .pop-up.request-accessed .pop-up-contant .inner-content form textarea {
+    margin-bottom: 25px;
+    width: 100% !important;
+  }
+  .pop-up.request-accessed .pop-up-contant .inner-content .--close-pop-up-- {
+    right: 0px;
+    top: 17px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

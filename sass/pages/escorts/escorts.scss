@@ -124,6 +124,11 @@ body {
             letter-spacing: normal;
             text-decoration: none;
             color: $golden;
+            transition: 0.3s;
+            &:hover {
+              color: $white;
+              transition: 0.3s;
+            }
           }
         }
         /* Name */
@@ -193,6 +198,18 @@ body {
             letter-spacing: normal;
             text-decoration: none;
             color: $golden;
+            transition: 0.3s;
+            i {
+              transition: 0.3s;
+            }
+          }
+          &.active {
+            span {
+              i {
+                transform: rotate(-180deg);
+                transition: 0.3s;
+              }
+            }
           }
         }
         /* Phone/Whatsapp */
@@ -296,6 +313,7 @@ body {
             text-decoration: none;
             padding: 11px 40px;
             background: $golden;
+            transition: 0.3s;
             span {
               font-size: 14px;
               font-weight: 500;
@@ -303,11 +321,27 @@ body {
               font-style: normal;
               line-height: normal;
               letter-spacing: normal;
+              transition: 0.3s;
               color: $black;
               svg {
                 margin-top: -5px;
                 .svg-fill {
                   fill: $black;
+                  transition: 0.3s;
+                }
+              }
+            }
+            &:hover {
+              transition: 0.3s;
+              background: $black;
+              span {
+                color: $golden;
+                transition: 0.3s;
+                svg {
+                  .svg-fill {
+                    fill: $golden;
+                    transition: 0.3s;
+                  }
                 }
               }
             }
@@ -369,6 +403,7 @@ body {
         }
         /* Share More */
         .-share {
+          width: fit-content;
           cursor: pointer;
           span {
             font-size: 14px;
@@ -377,12 +412,52 @@ body {
             font-style: normal;
             line-height: 1.57;
             letter-spacing: normal;
+            transition: 0.3s;
             color: $golden;
+            display: in;
             svg {
               margin-top: -5px;
               .svg-fill {
                 fill: $golden;
+                transition: 0.3s;
               }
+            }
+            &:hover {
+              transition: 0.3s;
+              color: $white;
+              svg {
+                .svg-fill {
+                  fill: $white;
+                  transition: 0.3s;
+                }
+              }
+            }
+          }
+          .share-on {
+            display: none;
+            ul {
+              list-style: none;
+              margin: 30px 12px;
+              -webkit-animation: mymove 0.7s;
+              animation: mymove 0.7s;
+              li {
+                display: inline;
+                padding: 0px 10px;
+                a {
+                  transition: 0.4s;
+                  color: $golden;
+                  i {
+                    font-size: 25px;
+                  }
+                  &:hover {
+                    color: $white;
+                    transition: 0.4s;
+                  }
+                }
+              }
+            }
+            &.active {
+              display: block;
             }
           }
         }
@@ -405,6 +480,19 @@ body {
   }
 }
 
+@keyframes mymove {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-10%);
+    transform: translateX(-10%);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -417,8 +505,15 @@ body {
 
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
-  top: 389px;
-  right: 88px;
+  top: 659px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -433,6 +528,7 @@ body {
 
 .--ad-- {
   margin-top: 74px;
+  max-width: 1200px;
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

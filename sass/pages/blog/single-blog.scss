@@ -78,6 +78,29 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .--banner-- {
+    .--banner-content-- {
+      top: unset;
+      bottom: 106px;
+      h1 {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-- {
+    .--banner-content-- {
+      top: unset;
+      bottom: 97px;
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -88,6 +111,26 @@ body {
 
 .--konfidential-blog-- {
   padding: 100px 20px;
+  .container.come-back {
+    max-width: 1020px;
+    text-align: right;
+    margin-bottom: 21px;
+    a {
+      font-size: 14px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.57;
+      letter-spacing: normal;
+      color: #000;
+      text-decoration: none;
+      transition: 0.3s;
+      &:hover {
+        color: #c9a882;
+        transition: 0.3s;
+      }
+    }
+  }
   .container {
     max-width: 823px;
     /* >>>>> Blog Title <<<< */
@@ -185,6 +228,26 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .--konfidential-blog-- {
+    padding: 65px 20px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--konfidential-blog-- {
+    padding: 44px 0px 65px 0px;
+    .container {
+      .title {
+        h1 {
+          font-size: 24px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -197,8 +260,15 @@ body {
 
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
-  top: 389px;
-  right: 88px;
+  top: 401px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

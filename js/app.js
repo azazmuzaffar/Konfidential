@@ -78,6 +78,16 @@ $(document).ready(function () {
   });
 });
 
+/* Close Login Pop Up when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".--content--");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".--confirmation-message--").css("display", "none");
+  }
+});
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>> Ads - Make request change <<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -94,6 +104,16 @@ $(document).ready(function () {
   $(".--close-pop-up--").on("click", function () {
     $(".request-accessed").css("display", "none");
   });
+});
+
+/* Close Request Change Pop Up when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".inner-content");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".request-accessed").css("display", "none");
+  }
 });
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -114,14 +134,39 @@ $(document).ready(function () {
   });
 });
 
+/* Close Login Pop Up when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".inner-content");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".login-to-konfidential").css("display", "none");
+  }
+});
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>> Read More <<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
 $(".-read-more").click(function () {
   $(".-para").toggleClass("active");
+  $(".-read-more").toggleClass("active");
+  var elem = document.getElementById("switch-text");
+
+  if (elem.innerText === "LER MAIS") {
+    elem.innerText = "LER MENOS";
+    console.log("dsdsd");
+  } else {
+    elem.innerText = "LER MAIS";
+  }
 });
 
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
+
+$(document).ready(function () {
+  $(".-show-icons").on("click", function () {
+    $(".share-on").toggleClass("active");
+  });
+});

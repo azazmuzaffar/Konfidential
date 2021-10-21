@@ -52,6 +52,20 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+@media screen and (max-width: 768px) {
+  .--banner-content-- {
+    top: unset;
+    bottom: 136px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-content-- {
+    top: unset;
+    bottom: 148px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -104,6 +118,14 @@
   line-height: 1.57;
   letter-spacing: normal;
   color: #d8d8d8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--contact-konfidential-- .container .--contact-heading-- .--go-back-- a:hover {
+  color: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .--contact-konfidential-- .container .--timing-- p {
@@ -134,6 +156,7 @@
   text-align: center;
   padding: 14px 0px;
   border: 1px solid #c9a882;
+  border-right: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
@@ -385,6 +408,102 @@
   margin-left: 40px;
 }
 
+@media screen and (max-width: 1334px) {
+  .--contact-konfidential-- {
+    padding: 55px 100px 35px 100px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .--contact-konfidential-- .container {
+    /* Phone/Whatsapp/Email */
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 {
+    max-width: 171px;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4.-email {
+    border-right: none;
+    max-width: 226px !important;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--contact-konfidential-- {
+    padding: 81px 100px 25px 100px;
+  }
+  .--contact-konfidential-- .container {
+    /* Contact form */
+  }
+  .--contact-konfidential-- .container .--contact-heading-- {
+    /* Display none on tab */
+  }
+  .--contact-konfidential-- .container .--contact-heading-- .--go-back-- {
+    display: none;
+  }
+  .--contact-konfidential-- .container .--contact--form-- form .row .col-lg-6:first-of-type, .--contact-konfidential-- .container .--contact--form-- form .row .col-lg-6:nth-child(3) {
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .--contact-konfidential-- {
+    padding: 44px 80px 20px 80px;
+  }
+  .--contact-konfidential-- .container {
+    /* Main Heading */
+    /* Phone/Whatsapp/Email */
+    /* Contact form */
+  }
+  .--contact-konfidential-- .container .--contact-heading-- {
+    margin-bottom: 21px;
+  }
+  .--contact-konfidential-- .container .--contact-heading-- .--main-heading-- h1 {
+    font-size: 24px;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: block;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 {
+    max-width: 100%;
+    border-left: none;
+    border-bottom: none;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4.-email {
+    max-width: 100% !important;
+    border-bottom: 1px solid #c9a882;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 span {
+    font-size: 14px;
+  }
+  .--contact-konfidential-- .container .--contact--form-- form .row .col-lg-6,
+  .--contact-konfidential-- .container .--contact--form-- form .row .col-lg-12 {
+    margin-top: 16px;
+  }
+  .--contact-konfidential-- .container .--contact--form-- form .row .col-lg-6:first-of-type, .--contact-konfidential-- .container .--contact--form-- form .row .col-lg-6:nth-child(3) {
+    padding-right: 0px;
+  }
+  .--contact-konfidential-- .container .--contact--form-- form .row .error-message {
+    margin: 5px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--contact-konfidential-- {
+    padding: 44px 20px 20px 20px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -410,6 +529,9 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .--confirmation-message-- .--content-- .--confirmed--icon-- {
@@ -452,6 +574,15 @@
   color: #c9a882;
 }
 
+@media screen and (max-width: 768px) {
+  .--confirmation-message-- .--content-- {
+    padding: 0px 30px;
+  }
+  .--confirmation-message-- .--content-- .--text-- p br {
+    display: none;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -461,7 +592,14 @@
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 389px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

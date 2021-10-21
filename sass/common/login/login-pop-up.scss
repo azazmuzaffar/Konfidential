@@ -123,7 +123,12 @@ $navigations: 14px;
             text-transform: uppercase;
             background-color: $golden;
             border: none;
-            transition: 0.6s;
+            transition: 0.3s;
+            &:hover {
+              transition: 0.3s;
+              background-color: $black;
+              color: $golden;
+            }
           }
         }
         /* Close Pop Up Icon */
@@ -136,6 +141,44 @@ $navigations: 14px;
             .icon {
               fill: $black;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pop-up {
+    &.login-to-konfidential {
+      /* Main Area */
+      .pop-up-contant {
+        width: 100%;
+        padding: 0px 20px;
+        .inner-content {
+          padding: 8% 2%;
+          p {
+            padding: 0px 40px;
+          }
+          /* Form */
+          form {
+            /* Email */
+            .fetch-email {
+              margin-bottom: 10px;
+            }
+            /* Password */
+            .fetch-password {
+              margin-bottom: 25px;
+            }
+            /* Inputs */
+            input {
+              width: 100%;
+            }
+          }
+          /* Close Pop Up Icon */
+          .--close-login-- {
+            right: 0px;
+            top: 17px;
           }
         }
       }

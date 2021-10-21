@@ -106,9 +106,11 @@ body {
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
 .--my-ads-- {
-  padding: 302px 20px 130px 20px;
+  padding: 302px 20px 80px 20px;
+  min-height: calc(100vh - 100px);
   .container {
     max-width: 950px;
+
     /* Main Heading */
     h1 {
       font-family: "Spectral";
@@ -125,10 +127,8 @@ body {
     /* Content Area */
     .row {
       display: flex;
-      margin-bottom: 50px;
-      &:last-of-type {
-        margin-bottom: 0px;
-      }
+      padding-bottom: 50px;
+
       .col-lg-5,
       .col-lg-7 {
         padding: 0;
@@ -146,7 +146,7 @@ body {
         padding: 10px 48px;
         .--details-- {
           width: 100%;
-          height: 200px;
+          height: fit-content;
           h2 {
             font-family: "Spectral";
             font-size: 24px;
@@ -165,7 +165,7 @@ body {
             .-expire-date {
               width: 50%;
               padding: 15px 25px;
-              border: 1px solid black;
+              border: 1px solid #979797;
               p {
                 font-size: 16px;
                 font-weight: normal;
@@ -205,6 +205,12 @@ body {
                 letter-spacing: normal;
                 padding: 11px 35px;
                 background: $golden;
+                transition: 0.3s;
+                &:hover {
+                  transition: 0.3s;
+                  background-color: $black;
+                  color: $golden;
+                }
               }
             }
             .request-change {
@@ -214,12 +220,137 @@ body {
                 line-height: 1.57;
                 letter-spacing: normal;
                 color: unset;
+                transition: 0.3s;
+                &:hover {
+                  transition: 0.3s;
+                  color: $golden;
+                }
               }
             }
           }
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .--my-ads-- {
+    padding: 252px 40px 125px 40px;
+    .container {
+      /* Main Heading */
+      h1 {
+        margin-bottom: 80px;
+      }
+      /* Content Area */
+      .row {
+        .col-lg-5 {
+          max-width: 100%;
+        }
+        .col-lg-7 {
+          max-width: 100%;
+          padding: 0px 0px 10px 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .--my-ads-- {
+    padding: 202px 40px 20px 40px;
+    .container {
+      /* Main Heading */
+      h1 {
+        margin-bottom: 75px;
+      }
+      /* Content Area */
+      .row {
+        padding-top: 55px;
+        border-top: 1px solid $golden;
+        &:first-of-type {
+          padding-top: 0px;
+          padding-bottom: 55px;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .--my-ads-- {
+    padding: 194px 40px 60px 40px;
+    .container {
+      /* Main Heading */
+      h1 {
+        font-size: 35px;
+        font-weight: 400;
+        margin-bottom: 60px;
+      }
+      /* Content Area */
+      .row {
+        padding: 30px 0px 0px;
+        &:first-of-type {
+          padding-top: 0px;
+          padding-bottom: 20px;
+          border: none;
+        }
+        .col-lg-7 {
+          max-width: 100%;
+          padding: 21px 0px 10px 0px;
+          .--details-- {
+            h2 {
+              font-size: 20px;
+              font-weight: 400;
+            }
+            .--ads-info-- {
+              margin: 20px 0px 20px 0px;
+              .-views,
+              .-expire-date {
+                p {
+                  font-size: 14px;
+                  line-height: 1.58;
+                }
+              }
+            }
+            .--actions-- {
+              display: flex;
+              align-items: center;
+              width: 100%;
+              .renew-add,
+              .request-change {
+                width: 50%;
+                a {
+                  display: block;
+                  text-align: center;
+                }
+              }
+              .renew-add {
+                margin: 0px;
+                a {
+                  padding: 11px 0px;
+                  width: 100%;
+                }
+              }
+              .request-change {
+                a {
+                  span {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--my-ads-- {
+    padding: 194px 20px 80px 20px;
   }
 }
 
@@ -303,8 +434,13 @@ body {
             width: 213px;
             padding: 8px 0px;
             text-transform: uppercase;
-            background-color: $golden06;
-            transition: 0.6s;
+            background-color: $golden;
+            transition: 0.3s;
+            &:hover {
+              background-color: $black;
+              color: $golden;
+              transition: 0.3s;
+            }
           }
         }
         /* Close Pop Up Icon */
@@ -317,6 +453,38 @@ body {
             .icon {
               fill: $black;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .pop-up {
+    &.request-accessed {
+      /* Main Area */
+      .pop-up-contant {
+        width: 100%;
+        padding: 0px 20px;
+        .inner-content {
+          padding: 8% 2%;
+          p {
+            padding: 0px 40px;
+            margin-bottom: 20px;
+          }
+          /* Form */
+          form {
+            /* Textarea */
+            textarea {
+              margin-bottom: 25px;
+              width: 100% !important;
+            }
+          }
+          /* Close Pop Up Icon */
+          .--close-pop-up-- {
+            right: 0px;
+            top: 17px;
           }
         }
       }

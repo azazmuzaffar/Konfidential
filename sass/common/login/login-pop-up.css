@@ -127,8 +127,15 @@
   text-transform: uppercase;
   background-color: #c9a882;
   border: none;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.pop-up.login-to-konfidential .pop-up-contant .inner-content form input[type="submit"]:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #000000;
+  color: #c9a882;
 }
 
 .pop-up.login-to-konfidential .pop-up-contant .inner-content .--close-login-- {
@@ -140,6 +147,42 @@
 
 .pop-up.login-to-konfidential .pop-up-contant .inner-content .--close-login-- svg .icon {
   fill: #000000;
+}
+
+@media screen and (max-width: 650px) {
+  .pop-up.login-to-konfidential {
+    /* Main Area */
+  }
+  .pop-up.login-to-konfidential .pop-up-contant {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .pop-up.login-to-konfidential .pop-up-contant .inner-content {
+    padding: 8% 2%;
+    /* Form */
+    /* Close Pop Up Icon */
+  }
+  .pop-up.login-to-konfidential .pop-up-contant .inner-content p {
+    padding: 0px 40px;
+  }
+  .pop-up.login-to-konfidential .pop-up-contant .inner-content form {
+    /* Email */
+    /* Password */
+    /* Inputs */
+  }
+  .pop-up.login-to-konfidential .pop-up-contant .inner-content form .fetch-email {
+    margin-bottom: 10px;
+  }
+  .pop-up.login-to-konfidential .pop-up-contant .inner-content form .fetch-password {
+    margin-bottom: 25px;
+  }
+  .pop-up.login-to-konfidential .pop-up-contant .inner-content form input {
+    width: 100%;
+  }
+  .pop-up.login-to-konfidential .pop-up-contant .inner-content .--close-login-- {
+    right: 0px;
+    top: 17px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

@@ -44,9 +44,18 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.--banner-bg-- {
+  position: relative;
+  background: url("../../../images/404/banner-desk.jpg");
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
 .--banner-content-- {
   top: 56.7%;
-  left: 37.4%;
+  left: 67.9%;
   bottom: unset;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -107,6 +116,56 @@
   color: #000000;
   padding: 11px 30px;
   background: #c9a882;
+}
+
+@media screen and (max-width: 1024px) {
+  .--banner-bg-- {
+    height: calc(100vh - 160px);
+  }
+  .--banner-content-- {
+    top: 55.8%;
+    left: 55.9%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--banner-bg-- {
+    background: url("../../../images/404/banner-tab.jpg");
+  }
+  .--banner-content-- {
+    /* Main Heading */
+    /* Sub Heading */
+  }
+  .--banner-content-- h1 {
+    font-size: 130px;
+  }
+  .--banner-content-- h2 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-content-- {
+    /* Main Heading */
+    /* Sub Heading */
+    /* Paragraph */
+  }
+  .--banner-content-- h1 {
+    font-size: 100px;
+  }
+  .--banner-content-- h2 {
+    font-size: 40px;
+  }
+  .--banner-content-- P {
+    font-size: 16px;
+    padding-right: 80px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .--banner-bg-- {
+    background: url("../../../images/404/banner-mob.jpg");
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

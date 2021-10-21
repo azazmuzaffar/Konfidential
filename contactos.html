@@ -164,7 +164,11 @@
 
     <div class="--banner--">
       <div class="--banner-bg--">
-        <img src="./images/contactos/banner-desk.jpg" alt="banner" />
+        <picture>
+          <source media="(max-width:375px)" srcset="./images/contactos/banner-mob.jpg" />
+          <source media="(max-width:768px)" srcset="./images/contactos/banner-tab.jpg" />
+          <img src="./images/contactos/banner-desk.jpg" alt="banner" />
+        </picture>
       </div>
       <div class="--banner-overlay--"></div>
       <div class="--banner-content--">
@@ -205,7 +209,7 @@
         <div class="--contact--through--">
           <div class="row">
             <!-- Phone -->
-            <div class="-phone col-lg-4">
+            <div class="-phone col-md-4 col-lg-4">
               <a href="tel:+351936123757">
                 <div class="--phone--">
                   <span>
@@ -225,7 +229,7 @@
               </a>
             </div>
             <!-- Whatsapp -->
-            <div class="-whatsapp col-lg-4">
+            <div class="-whatsapp col-md-4 col-lg-4">
               <a href="https://wa.me/351936123757" target="_blank">
                 <div class="--whatsapp--">
                   <span>
@@ -362,11 +366,15 @@
     <!-- >>>>>>>>>>>>>>>> Ads <<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
-    <a href="#">
-      <div class="--ad-- container">
-        <img src="./images/contactos/ad-desk.jpg" alt="acompanhantes" />
-      </div>
-    </a>
+    <div class="--ad-- container">
+      <a href="#">
+        <picture>
+          <source media="(max-width:375px)" srcset="./images/contactos/ad-mob.jpg" />
+          <source media="(max-width:768px)" srcset="./images/contactos/ad-tab.png" />
+          <img src="./images/contactos/ad-desk.jpg" alt="ads" />
+        </picture>
+      </a>
+    </div>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>> Footer <<<<<<<<<<<<< -->

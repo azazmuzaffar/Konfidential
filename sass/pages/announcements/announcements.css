@@ -83,6 +83,20 @@
   transition: 0.4s;
 }
 
+@media screen and (max-width: 768px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 113px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-- .--banner-content-- {
+    top: unset;
+    bottom: 69px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -238,6 +252,7 @@
 .--contact-konfidential-- .container.why .--why-konfidential-- .--contact--through-- .row {
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .--contact-konfidential-- .container.why .--why-konfidential-- .--contact--through-- .row .col-lg-4 {
@@ -245,6 +260,7 @@
   text-align: center;
   padding: 14px 0px;
   border: 1px solid #c9a882;
+  border-right: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
@@ -293,12 +309,159 @@
   transition: 0.3s;
 }
 
+.--contact-konfidential-- .container.why .--why-konfidential-- .--contact--through-- .row .advertise-here {
+  margin-top: 55px;
+}
+
+.--contact-konfidential-- .container.why .--why-konfidential-- .--contact--through-- .row .advertise-here a {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  padding: 11px 90px;
+  background: #c9a882d2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--contact-konfidential-- .container.why .--why-konfidential-- .--contact--through-- .row .advertise-here a:hover {
+  background: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+  .--contact-konfidential-- {
+    padding: 100px 50px 87px 50px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .--contact-konfidential-- {
+    padding: 100px 100px 87px 100px;
+  }
+  .--contact-konfidential-- .container.how .--steps-- {
+    display: block;
+  }
   .--contact-konfidential-- .container.how .--steps-- .col-lg-4 {
+    max-width: 100%;
+    padding: 5px 0px 30px 33px;
     margin-top: 67px;
   }
   .--contact-konfidential-- .container.how .--steps-- .col-lg-4:first-of-type {
     margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .--contact-konfidential-- .container {
+    /* Phone/Whatsapp/Email */
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 {
+    max-width: 171px;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4.-email {
+    border-right: none;
+    max-width: 226px !important;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--contact-konfidential-- {
+    padding: 81px 94px 60px 94px;
+  }
+  .--contact-konfidential-- .container.how {
+    margin-bottom: 68px;
+  }
+  .--contact-konfidential-- .container.how h3 {
+    display: none;
+  }
+  .--contact-konfidential-- .container.how .--steps-- {
+    margin-top: 110px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .--contact-konfidential-- {
+    padding: 81px 40px 60px 40px;
+  }
+  .--contact-konfidential-- .container {
+    /* Phone/Whatsapp/Email */
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: block;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 {
+    max-width: 100%;
+    border-left: none !important;
+    border-bottom: none !important;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4.-email {
+    max-width: 100% !important;
+    border-bottom: 1px solid #c9a882 !important;
+  }
+  .--contact-konfidential-- .container .--contact--through-- .row .col-lg-4 span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--contact-konfidential-- {
+    padding: 44px 20px 60px 20px;
+  }
+  .--contact-konfidential-- .container.how {
+    margin-bottom: 60px;
+  }
+  .--contact-konfidential-- .container.how h1 {
+    font-size: 24px;
+  }
+  .--contact-konfidential-- .container.how .--steps-- {
+    margin-top: 90px;
+    padding: 0px 20px 0px 40px;
+  }
+  .--contact-konfidential-- .container.how .--steps-- .col-lg-4 {
+    margin-top: 51px;
+  }
+  .--contact-konfidential-- .container.how .--steps-- .col-lg-4 .--step-- .--number-- {
+    position: absolute;
+    top: -51px;
+    left: -26px;
+    width: 51px;
+    height: 51px;
+  }
+  .--contact-konfidential-- .container.how .--steps-- .col-lg-4 .--step-- .--number-- .-number span {
+    font-size: 25px;
+  }
+  .--contact-konfidential-- .container.why .--why-konfidential-- {
+    /* heading */
+  }
+  .--contact-konfidential-- .container.why .--why-konfidential-- h2 {
+    font-size: 20px;
+  }
+  .--contact-konfidential-- .container.why .--why-konfidential-- .advertise-here {
+    margin-top: 40px !important;
+    background: #c9a882;
+  }
+  .--contact-konfidential-- .container.why .--why-konfidential-- .advertise-here a {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -311,7 +474,14 @@
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 574px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

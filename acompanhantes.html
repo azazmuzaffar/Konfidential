@@ -164,7 +164,11 @@
 
     <div class="--banner--">
       <div class="--banner-bg--">
-        <img src="./images/acompanhantes/banner-desk.jpg" alt="banner" />
+        <picture>
+          <source media="(max-width:375px)" srcset="./images/acompanhantes/banner-mob.jpg" />
+          <source media="(max-width:768px)" srcset="./images/acompanhantes/banner-tab.png" />
+          <img src="./images/acompanhantes/banner-desk.jpg" alt="banner" />
+        </picture>
       </div>
       <div class="--banner-overlay--"></div>
       <div class="--banner-content--">
@@ -665,11 +669,15 @@
     <!-- >>>>>>>>>>>>>>>> Ads <<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
-    <a href="#">
-      <div class="--ad-- container">
-        <img src="./images/acompanhantes/ad-bg.jpg" alt="acompanhantes" />
-      </div>
-    </a>
+    <div class="--ad-- container">
+      <a href="#">
+        <picture>
+          <source media="(max-width:768px)" srcset="./images/acompanhantes/ad-mob.jpg" />
+          <source media="(max-width:768px)" srcset="./images/acompanhantes/ad-tab.png" />
+          <img src="./images/acompanhantes/ad-desk.jpg" alt="acompanhantes" />
+        </picture>
+      </a>
+    </div>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>> Footer <<<<<<<<<<<<< -->

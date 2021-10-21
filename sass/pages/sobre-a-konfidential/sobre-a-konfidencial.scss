@@ -86,8 +86,33 @@ $lightGolden: rgba(255, 255, 255, 0.45);
 
 @import url("../../../sass/common/banner/banner.css");
 
-.--banner-content-- {
-  bottom: 109px;
+.--banner-- {
+  .--banner-content-- {
+    bottom: 109px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--banner-- {
+    .--banner-content-- {
+      top: unset;
+      bottom: 76px;
+      h1 {
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--banner-- {
+    .--banner-content-- {
+      top: unset;
+      bottom: 65px;
+    }
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -103,10 +128,9 @@ $lightGolden: rgba(255, 255, 255, 0.45);
   padding: 100px 0px 96px 0px;
   .container {
     max-width: 100%;
-    padding: 0;
     .row {
       /* >>>> Lef and Right Image <<<< */
-      .col-lg-3 {
+      .col-xl-3 {
         position: relative;
         margin: 0;
         padding: 0;
@@ -128,8 +152,6 @@ $lightGolden: rgba(255, 255, 255, 0.45);
     .--the-text-- {
       max-width: 823px;
       margin: 0 auto;
-      margin-left: 40px;
-      margin-right: 40px;
       h1 {
         font-family: "Spectral";
         font-size: 35px;
@@ -182,6 +204,64 @@ $lightGolden: rgba(255, 255, 255, 0.45);
   }
 }
 
+@media screen and (max-width: 1700px) {
+  .--sobre-a-konfidential-- {
+    .container {
+      .row {
+        /* >>>> Lef and Right Image <<<< */
+        .col-xl-3 {
+          .--left--image-- {
+            bottom: -178px;
+            img {
+              width: 300px;
+            }
+          }
+          .--right--image-- {
+            width: 300px;
+            bottom: -303px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .--sobre-a-konfidential-- {
+    .container {
+      max-width: 100%;
+      .row {
+        /* >>>> Lef and Right Image <<<< */
+        .col-xl-3 {
+          display: none;
+        }
+      }
+      .--the-text-- {
+        max-width: 570px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--sobre-a-konfidential-- {
+    padding: 81px 40px 65px 40px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--sobre-a-konfidential-- {
+    padding: 44px 0px 60px 0px;
+    .container {
+      .--the-text-- {
+        h1 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -196,6 +276,9 @@ $lightGolden: rgba(255, 255, 255, 0.45);
   height: 759px;
   padding: 78px 0px 85px 0px;
   background: url("../../../images/sobre-a-konfidential/location-bg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   .container {
     .--line-- {
       background-color: $white;
@@ -218,6 +301,11 @@ $lightGolden: rgba(255, 255, 255, 0.45);
     }
   }
 }
+@media screen and (max-width: 700px) {
+  .--locations-- {
+    height: 860px !important;
+  }
+}
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
@@ -232,7 +320,14 @@ $lightGolden: rgba(255, 255, 255, 0.45);
 /* >>>>>>>> Signature position <<<<<<< */
 .--signature-- {
   top: 570px;
-  right: 88px;
+  right: 175px;
+}
+
+@media screen and (max-width: 768px) {
+  /* >>>>>>>> Signature position <<<<<<< */
+  .--signature-- {
+    right: 51px;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
