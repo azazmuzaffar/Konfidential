@@ -17,22 +17,18 @@
 /* >>>>>>>>>>>>>>> Body <<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 @import url("../../../sass/common/body/body.css");
-@import url("../../../sass/common/header/navbar.css");
-@import url("../../../sass/common/banner/banner.css");
-@import url("../../../sass/common/signature/signature.css");
-@import url("../../../sass/common/ads/ads.css");
-@import url("../../../sass/common/footer/footer.css");
-@import url("../../../sass/common/login/login-pop-up.css");
-body {
-  padding-top: 271px;
-}
-
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+@import url("../../../sass/common/header/navbar.css");
+@import url("../../../sass/common/banner/banner.css");
+@import url("../../../sass/common/signature/signature.css");
+@import url("../../../sass/common/ads/ads.css");
+@import url("../../../sass/common/footer/footer.css");
+@import url("../../../sass/common/login/login-pop-up.css");
 .navbar .--navbar--left-- {
   margin-top: -104px;
 }
@@ -62,6 +58,10 @@ body {
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>> Escort Details <<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+.escort-details {
+  margin: 271px 0px 0px;
+}
+
 .escort-details .container {
   position: relative;
   max-width: 1170px;
@@ -193,6 +193,10 @@ body {
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
   max-height: fit-content;
+}
+
+.escort-details .container .-right .escort-about .-read-more {
+  margin-top: 15px;
 }
 
 .escort-details .container .-right .escort-about .-read-more span {
@@ -449,7 +453,6 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   color: #c9a882;
-  display: in;
 }
 
 .escort-details .container .-right .escort-about .-share span svg {
@@ -551,6 +554,140 @@ body {
   }
 }
 
+/* Adding Space between Slick Slide/Crousel Items */
+/* the slides */
+.slick-slide {
+  margin: 0 5px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -5px;
+}
+
+/* Custom Slick Dots Start */
+.slick-dots li button {
+  display: none;
+}
+
+.slick-dots {
+  position: absolute;
+  height: 30px;
+  bottom: -60px;
+  width: 100%;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 31px;
+  height: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 1.5px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.slick-dots li.slick-active {
+  background: #c9a882;
+}
+
+/* End */
+@media screen and (max-width: 1300px) {
+  /* >>>>>>>> Escort <<<<<<< */
+  .escort-details {
+    margin: 190px 0px 0px;
+    padding: 0px 48px 0px 50px;
+  }
+  .escort-details .container {
+    max-width: 100%;
+  }
+  .escort-details .container .-left,
+  .escort-details .container .-right {
+    padding: 0;
+  }
+  .escort-details .container .-left {
+    max-width: 100%;
+  }
+  .escort-details .container .-left img {
+    width: 100%;
+    margin-top: 14px;
+  }
+  .escort-details .container .-right {
+    max-width: 100%;
+  }
+  .escort-details .container .-right .escort-about {
+    padding-left: 40px;
+    /* Come Back */
+    /* Name */
+    /* Phone/Whatsapp */
+    /* All Services Bottom Text */
+  }
+  .escort-details .container .-right .escort-about .-come-back {
+    display: none;
+  }
+  .escort-details .container .-right .escort-about .-name {
+    margin-bottom: 3px;
+  }
+  .escort-details .container .-right .escort-about .-name h1 {
+    font-size: 24px;
+  }
+  .escort-details .container .-right .escort-about .-phone-whatsapp {
+    padding: 0px 20px;
+  }
+  .escort-details .container .-right .escort-about .-phone-whatsapp .row .col-lg-6 a .-phone,
+  .escort-details .container .-right .escort-about .-phone-whatsapp .row .col-lg-6 a .-whatsapp {
+    padding: 14px 0px;
+  }
+  .escort-details .container .-right .escort-about .-phone-whatsapp .row .col-lg-6 a .-phone span,
+  .escort-details .container .-right .escort-about .-phone-whatsapp .row .col-lg-6 a .-whatsapp span {
+    font-size: 14px;
+  }
+  .escort-details .container .-right .escort-about .all-service {
+    position: relative;
+    margin-top: 28px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* >>>>>>>> Escort <<<<<<< */
+  .escort-details {
+    margin: 175px 0px 0px;
+    padding: 0px 40px 0px 40px;
+  }
+  .escort-details .container .-left {
+    padding: 0px 30px;
+    margin-bottom: 70px;
+  }
+  .escort-details .container .-right .escort-about {
+    padding-left: 0px;
+    /* Phone/Whatsapp */
+    /* Book Now */
+    /* All Services Bottom Text */
+  }
+  .escort-details .container .-right .escort-about .-phone-whatsapp {
+    padding: 0px 20px;
+  }
+  .escort-details .container .-right .escort-about .-phone-whatsapp .row .col-lg-6 {
+    border-left: none;
+  }
+  .escort-details .container .-right .escort-about .-phone-whatsapp .row .col-lg-6:last-of-type {
+    border-top: none;
+  }
+  .escort-details .container .-right .escort-about .book-now a {
+    display: block;
+    text-align: center;
+    width: 100%;
+  }
+  .escort-details .container .-right .escort-about .all-service {
+    position: relative;
+    margin-top: 28px;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -579,6 +716,26 @@ body {
 .--ad-- {
   margin-top: 74px;
   max-width: 1200px;
+}
+
+@media screen and (max-width: 1350px) {
+  .--ad-- {
+    max-width: 100%;
+    padding: 0px 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--ad-- {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--ad-- {
+    margin-top: 40px;
+    padding: 0;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

@@ -12,6 +12,13 @@
   width: 100%;
 }
 
+@media screen and (max-width: 1350px) {
+  .--ad-- {
+    max-width: 100%;
+    padding: 0px 45px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .--ad-- {
     margin-bottom: 60px;

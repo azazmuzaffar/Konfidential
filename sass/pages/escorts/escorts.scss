@@ -37,10 +37,6 @@ $messageError: #ce3737;
 
 @import url("../../../sass/common/body/body.css");
 
-body {
-  padding-top: 271px;
-}
-
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -89,6 +85,7 @@ body {
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
 .escort-details {
+  margin: 271px 0px 0px;
   .container {
     position: relative;
     max-width: 1170px;
@@ -188,6 +185,7 @@ body {
         }
         /* Read More */
         .-read-more {
+          margin-top: 15px;
           span {
             cursor: pointer;
             font-size: 14px;
@@ -414,7 +412,6 @@ body {
             letter-spacing: normal;
             transition: 0.3s;
             color: $golden;
-            display: in;
             svg {
               margin-top: -5px;
               .svg-fill {
@@ -493,6 +490,150 @@ body {
   }
 }
 
+/* Adding Space between Slick Slide/Crousel Items */
+
+/* the slides */
+.slick-slide {
+  margin: 0 5px;
+}
+/* the parent */
+.slick-list {
+  margin: 0 -5px;
+}
+
+/* Custom Slick Dots Start */
+.slick-dots li button {
+  display: none;
+}
+.slick-dots {
+  position: absolute;
+  height: 30px;
+  bottom: -60px;
+  width: 100%;
+  text-align: center;
+  li {
+    position: relative;
+    display: inline-block;
+    width: 31px;
+    height: 5px;
+    transition: all 0.5s;
+    margin: 0 4px;
+    cursor: pointer;
+    border-radius: 1.5px;
+    background-color: rgba(255, 255, 255, 0.45);
+    &.slick-active {
+      background: $golden;
+    }
+  }
+}
+
+/* End */
+
+@media screen and (max-width: 1300px) {
+  /* >>>>>>>> Escort <<<<<<< */
+  .escort-details {
+    margin: 190px 0px 0px;
+    padding: 0px 48px 0px 50px;
+    .container {
+      max-width: 100%;
+      .-left,
+      .-right {
+        padding: 0;
+      }
+      .-left {
+        max-width: 100%;
+        img {
+          width: 100%;
+          margin-top: 14px;
+        }
+      }
+      .-right {
+        max-width: 100%;
+        .escort-about {
+          padding-left: 40px;
+          /* Come Back */
+          .-come-back {
+            display: none;
+          }
+          /* Name */
+          .-name {
+            margin-bottom: 3px;
+            h1 {
+              font-size: 24px;
+            }
+          }
+          /* Phone/Whatsapp */
+          .-phone-whatsapp {
+            padding: 0px 20px;
+            .row {
+              .col-lg-6 {
+                a {
+                  .-phone,
+                  .-whatsapp {
+                    padding: 14px 0px;
+                    span {
+                      font-size: 14px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          /* All Services Bottom Text */
+          .all-service {
+            position: relative;
+            margin-top: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* >>>>>>>> Escort <<<<<<< */
+  .escort-details {
+    margin: 175px 0px 0px;
+    padding: 0px 40px 0px 40px;
+    .container {
+      .-left {
+        padding: 0px 30px;
+        margin-bottom: 70px;
+      }
+      .-right {
+        .escort-about {
+          padding-left: 0px;
+          /* Phone/Whatsapp */
+          .-phone-whatsapp {
+            padding: 0px 20px;
+            .row {
+              .col-lg-6 {
+                border-left: none;
+                &:last-of-type {
+                  border-top: none;
+                }
+              }
+            }
+          }
+          /* Book Now */
+          .book-now {
+            a {
+              display: block;
+              text-align: center;
+              width: 100%;
+            }
+          }
+          /* All Services Bottom Text */
+          .all-service {
+            position: relative;
+            margin-top: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -529,6 +670,26 @@ body {
 .--ad-- {
   margin-top: 74px;
   max-width: 1200px;
+}
+
+@media screen and (max-width: 1350px) {
+  .--ad-- {
+    max-width: 100%;
+    padding: 0px 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .--ad-- {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .--ad-- {
+    margin-top: 40px;
+    padding: 0;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

@@ -170,3 +170,34 @@ $(document).ready(function () {
     $(".share-on").toggleClass("active");
   });
 });
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+  /* the viewport is less than 768 pixels wide */
+
+  var $slickEl = $(".escort-images");
+
+  $slickEl.slick({
+    centerMode: true,
+    centerPadding: "0px",
+    slidesToShow: 1,
+    focusOnSelect: true,
+    dots: true,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+        },
+      },
+    ],
+  });
+}
