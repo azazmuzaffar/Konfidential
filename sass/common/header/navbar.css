@@ -399,6 +399,8 @@
     width: 100%;
     padding-top: 140px !important;
     margin: 30px 0px 0px 0px;
+    overflow: hidden;
+    background: yellow;
   }
   .navbar.active .--navbar--center-- .--center--list-- .nav-item {
     /* >>>> Dropdown List <<<< */
