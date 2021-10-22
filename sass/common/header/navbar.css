@@ -343,6 +343,7 @@
     height: 100%;
     overflow: scroll;
     background: #ffffff;
+    margin-top: 140px !important;
     /* >>>> Nav Left becomes Top on Tabs <<<< */
     /* >>>> Nav Center becomes Middle <<<< */
     /* >>>> Remove search when mobile nav is "active" <<<< */
@@ -397,10 +398,8 @@
   .navbar.active .--navbar--center-- .--center--list-- {
     display: block;
     width: 100%;
-    padding-top: 140px !important;
     margin: 30px 0px 0px 0px;
-    overflow: hidden;
-    background: yellow;
+    background: pink;
   }
   .navbar.active .--navbar--center-- .--center--list-- .nav-item {
     /* >>>> Dropdown List <<<< */
