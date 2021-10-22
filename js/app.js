@@ -3,6 +3,90 @@
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>> All Pages - Login <<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* Show Login Pop Up */
+$(document).ready(function () {
+  $(".make-login").on("click", function () {
+    $(".login-to-konfidential").css("display", "block");
+  });
+});
+
+/* Close Login Pop Up */
+$(document).ready(function () {
+  $(".--close-login--").on("click", function () {
+    $(".login-to-konfidential").css("display", "none");
+  });
+});
+
+/* Close Login Pop Up when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".inner-content");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".login-to-konfidential").css("display", "none");
+  }
+});
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>> Contact Form Submission <<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* Show confirmation Message */
+$(document).ready(function () {
+  $(".enable-confirmation").on("click", function () {
+    $(".--confirmation-message--").css("display", "block");
+  });
+});
+
+/* Hide confirmation Message */
+$(document).ready(function () {
+  $(".--confirmed--").on("click", function () {
+    $(".--confirmation-message--").css("display", "none");
+  });
+});
+
+/* Close Login Pop Up when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".--content--");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".--confirmation-message--").css("display", "none");
+  }
+});
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>> Ads - Make request change <<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* Show confirmation Message */
+$(document).ready(function () {
+  $(".make-access").on("click", function () {
+    $(".request-accessed").css("display", "block");
+  });
+});
+
+/* Hide confirmation Message */
+$(document).ready(function () {
+  $(".--close-pop-up--").on("click", function () {
+    $(".request-accessed").css("display", "none");
+  });
+});
+
+/* Close Request Change Pop Up when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".inner-content");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".request-accessed").css("display", "none");
+  }
+});
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
@@ -101,90 +185,6 @@ $(document).ready(function () {
   $(".-show-icons").on("click", function () {
     $(".share-on").toggleClass("active");
   });
-});
-
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-/* >>>>>> Contact Form Submission <<<<< */
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-
-/* Show confirmation Message */
-$(document).ready(function () {
-  $(".enable-confirmation").on("click", function () {
-    $(".--confirmation-message--").css("display", "block");
-  });
-});
-
-/* Hide confirmation Message */
-$(document).ready(function () {
-  $(".--confirmed--").on("click", function () {
-    $(".--confirmation-message--").css("display", "none");
-  });
-});
-
-/* Close Login Pop Up when click outside the target DIV */
-$(document).mouseup(function (e) {
-  var container = $(".--content--");
-
-  // if the target of the click isn't the container nor a descendant of the container
-  if (!container.is(e.target) && container.has(e.target).length === 0) {
-    $(".--confirmation-message--").css("display", "none");
-  }
-});
-
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-/* >>>>> Ads - Make request change <<<< */
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-
-/* Show confirmation Message */
-$(document).ready(function () {
-  $(".make-access").on("click", function () {
-    $(".request-accessed").css("display", "block");
-  });
-});
-
-/* Hide confirmation Message */
-$(document).ready(function () {
-  $(".--close-pop-up--").on("click", function () {
-    $(".request-accessed").css("display", "none");
-  });
-});
-
-/* Close Request Change Pop Up when click outside the target DIV */
-$(document).mouseup(function (e) {
-  var container = $(".inner-content");
-
-  // if the target of the click isn't the container nor a descendant of the container
-  if (!container.is(e.target) && container.has(e.target).length === 0) {
-    $(".request-accessed").css("display", "none");
-  }
-});
-
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-/* >>>>>>>> All Pages - Login <<<<<<<<< */
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-
-/* Show Login Pop Up */
-$(document).ready(function () {
-  $(".make-login").on("click", function () {
-    $(".login-to-konfidential").css("display", "block");
-  });
-});
-
-/* Close Login Pop Up */
-$(document).ready(function () {
-  $(".--close-login--").on("click", function () {
-    $(".login-to-konfidential").css("display", "none");
-  });
-});
-
-/* Close Login Pop Up when click outside the target DIV */
-$(document).mouseup(function (e) {
-  var container = $(".inner-content");
-
-  // if the target of the click isn't the container nor a descendant of the container
-  if (!container.is(e.target) && container.has(e.target).length === 0) {
-    $(".login-to-konfidential").css("display", "none");
-  }
 });
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

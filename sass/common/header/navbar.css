@@ -397,13 +397,12 @@
   .navbar.active .--navbar--center-- .--center--list-- {
     display: block;
     width: 100%;
-    padding-bottom: 10px !important;
+    padding-bottom: 15px !important;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     position: relative;
     top: 135px;
-    background: orange;
   }
   .navbar.active .--navbar--center-- .--center--list-- .nav-item {
     /* >>>> Dropdown List <<<< */
