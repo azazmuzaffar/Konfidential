@@ -343,7 +343,6 @@
     height: 100%;
     overflow: scroll;
     background: #ffffff;
-    margin-top: 140px !important;
     /* >>>> Nav Left becomes Top on Tabs <<<< */
     /* >>>> Nav Center becomes Middle <<<< */
     /* >>>> Remove search when mobile nav is "active" <<<< */
@@ -398,14 +397,16 @@
   .navbar.active .--navbar--center-- .--center--list-- {
     display: block;
     width: 100%;
-    margin: 30px 0px 0px 0px;
-    background: pink;
+    padding-bottom: 10px !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
+    top: 135px;
+    background: orange;
   }
   .navbar.active .--navbar--center-- .--center--list-- .nav-item {
     /* >>>> Dropdown List <<<< */
-  }
-  .navbar.active .--navbar--center-- .--center--list-- .nav-item:last-of-type {
-    margin-bottom: 40px;
   }
   .navbar.active .--navbar--center-- .--center--list-- .nav-item .nav-link {
     padding: 0;
