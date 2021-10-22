@@ -339,13 +339,13 @@
     height: -moz-fit-content;
     height: fit-content;
     padding: 0px;
+    position: fixed;
     /* >>>> Nav Left becomes Top on Tabs <<<< */
     /* >>>> Nav Center becomes Middle <<<< */
     /* >>>> Remove search when mobile nav is "active" <<<< */
   }
   .navbar.active .--navbar--left-- {
     background: #000000;
-    position: fixed;
     top: 0;
     padding: 0px 28px 0px 28px;
     z-index: 999999;
@@ -353,8 +353,7 @@
   .navbar.active .--navbar--center-- {
     width: 100%;
     text-align: left;
-    position: fixed;
-    bottom: 0;
+    top: 0px;
     height: calc(100vh - 40px);
     background: #ffffff;
     z-index: 99;

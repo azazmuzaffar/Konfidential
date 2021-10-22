@@ -61,6 +61,49 @@ $(".dropdown .dropdown-menu li").click(function () {
 });
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>> Single Escort Page <<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* Slick Crousel will only work when viewport is less than 768px */
+if (window.matchMedia("(max-width: 767px)").matches) {
+  /* the viewport is less than 768 pixels wide */
+
+  var $slickEl = $(".escort-images");
+
+  $slickEl.slick({
+    centerMode: true,
+    centerPadding: "0px",
+    slidesToShow: 1,
+    focusOnSelect: true,
+    dots: true,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+        },
+      },
+    ],
+  });
+}
+
+/* show Share icons by cliking share button */
+$(document).ready(function () {
+  $(".-show-icons").on("click", function () {
+    $(".share-on").toggleClass("active");
+  });
+});
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>> Contact Form Submission <<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
@@ -165,39 +208,20 @@ $(".-read-more").click(function () {
 /* >>>>>>>>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
 
-$(document).ready(function () {
-  $(".-show-icons").on("click", function () {
-    $(".share-on").toggleClass("active");
+/* $(".carousel").on("touchstart", function (event) {
+  const xClick = event.originalEvent.touches[0].pageX;
+  $(this).one("touchmove", function (event) {
+    const xMove = event.originalEvent.touches[0].pageX;
+    const sensitivityInPx = 5;
+
+    if (Math.floor(xClick - xMove) > sensitivityInPx) {
+      $(this).carousel("next");
+    } else if (Math.floor(xClick - xMove) < -sensitivityInPx) {
+      $(this).carousel("prev");
+    }
+  });
+  $(this).on("touchend", function () {
+    $(this).off("touchmove");
   });
 });
-
-if (window.matchMedia("(max-width: 767px)").matches) {
-  /* the viewport is less than 768 pixels wide */
-
-  var $slickEl = $(".escort-images");
-
-  $slickEl.slick({
-    centerMode: true,
-    centerPadding: "0px",
-    slidesToShow: 1,
-    focusOnSelect: true,
-    dots: true,
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-        },
-      },
-    ],
-  });
-}
+ */

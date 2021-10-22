@@ -44,6 +44,7 @@ $navigations: 14px;
       rgba(0, 0, 0, 0.5)
     );
     z-index: 9;
+    pointer-events: none;
   }
 
   /* >>>> Carousel Indicators <<<< */
@@ -70,6 +71,7 @@ $navigations: 14px;
     text-align: center;
     color: $white;
     z-index: 9;
+    pointer-events: none;
     h1 {
       font-family: "Spectral", serif;
       font-size: 3.01vw;

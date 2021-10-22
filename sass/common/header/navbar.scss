@@ -334,11 +334,11 @@ $navigations: 14px;
     display: block;
     height: fit-content;
     padding: 0px;
+    position: fixed;
 
     /* >>>> Nav Left becomes Top on Tabs <<<< */
     .--navbar--left-- {
       background: $black;
-      position: fixed;
       top: 0;
       padding: 0px 28px 0px 28px;
       z-index: 999999;
@@ -348,8 +348,7 @@ $navigations: 14px;
     .--navbar--center-- {
       width: 100%;
       text-align: left;
-      position: fixed;
-      bottom: 0;
+      top: 0px;
       height: calc(100vh - 40px);
       background: $white;
       z-index: 99;
