@@ -335,6 +335,9 @@ $navigations: 14px;
     height: fit-content;
     padding: 0px;
     position: fixed;
+    height: 100vh;
+    background: $white;
+    overflow: scroll;
 
     /* >>>> Nav Left becomes Top on Tabs <<<< */
     .--navbar--left-- {

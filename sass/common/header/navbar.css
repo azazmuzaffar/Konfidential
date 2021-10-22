@@ -340,6 +340,9 @@
     height: fit-content;
     padding: 0px;
     position: fixed;
+    height: 100vh;
+    background: #ffffff;
+    overflow: scroll;
     /* >>>> Nav Left becomes Top on Tabs <<<< */
     /* >>>> Nav Center becomes Middle <<<< */
     /* >>>> Remove search when mobile nav is "active" <<<< */
