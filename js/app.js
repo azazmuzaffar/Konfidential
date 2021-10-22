@@ -225,3 +225,20 @@ $(".-read-more").click(function () {
   });
 });
  */
+
+function myFunction(x) {
+  if (x.matches) {
+    // If media query matches
+    document.getElementById("removeHref").setAttribute("href", "#find-in");
+  } else {
+    document.getElementById("removeHref").setAttribute("href", "../acompanhantes.html");
+  }
+}
+
+// Call listener function at run time
+
+$(document).ready(function () {
+  var x = window.matchMedia("(max-width: 1334px)");
+  myFunction(x);
+  x.addListener(myFunction);
+});
