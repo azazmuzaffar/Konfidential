@@ -358,6 +358,7 @@ $navigations: 14px;
         width: 100% !important;
         border-color: #c9a882;
         padding: 0px 30px 0px 5px;
+        text-decoration: none;
       }
       .--search-- {
         position: absolute;
@@ -597,11 +598,11 @@ $navigations: 14px;
     /* Right */
     .--navbar--right-- {
       h6 {
-        top: 27%;
+        top: 30%;
         font-size: 24px;
       }
       form {
-        top: 42%;
+        top: 45%;
         width: 80%;
       }
       .--close-search-- {

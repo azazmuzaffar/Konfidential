@@ -374,6 +374,7 @@
     width: 100% !important;
     border-color: #c9a882;
     padding: 0px 30px 0px 5px;
+    text-decoration: none;
   }
   .navbar .--navbar--right-- .--search-- {
     position: absolute;
@@ -604,11 +605,11 @@
     right: 20px;
   }
   .navbar .--navbar--right-- h6 {
-    top: 27%;
+    top: 30%;
     font-size: 24px;
   }
   .navbar .--navbar--right-- form {
-    top: 42%;
+    top: 45%;
     width: 80%;
   }
   .navbar .--navbar--right-- .--close-search-- {
