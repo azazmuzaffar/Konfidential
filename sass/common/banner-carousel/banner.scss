@@ -71,8 +71,7 @@ $navigations: 14px;
     text-align: center;
     color: $white;
     z-index: 9;
-    pointer-events: none;
-    h1 {
+    h2 {
       font-family: "Spectral", serif;
       font-size: 3.01vw;
       font-weight: 200;
@@ -143,7 +142,7 @@ $navigations: 14px;
       width: 100%;
       padding: 0px 18% 0px 18%;
       top: 50%;
-      h1 {
+      h2 {
         font-size: 40px;
       }
       .--line-- {
@@ -179,7 +178,7 @@ $navigations: 14px;
     .--banner--content-- {
       top: 50.5%;
       padding: 0px 13% 0px 13%;
-      h1 {
+      h2 {
         font-size: 45px;
         margin-bottom: 20px !important;
       }
@@ -203,7 +202,7 @@ $navigations: 14px;
     .--banner--content-- {
       top: 52%;
       padding: 0px 20px 0px 20px;
-      h1 {
+      h2 {
         line-height: 1.22;
         margin-bottom: 16px !important;
       }

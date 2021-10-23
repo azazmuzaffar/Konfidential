@@ -10,6 +10,7 @@
 @import url("../../../sass/common/body/body.css");
 @import url("../../../sass/common/header/navbar.css");
 @import url("../../../sass/common/banner/banner.css");
+@import url("../../../sass/common/login/login-pop-up.css");
 :root {
   --paragraph: 16px;
 }
@@ -42,7 +43,7 @@
 }
 
 .navbar .--navbar--right-- {
-  display: none;
+  display: none !important;
 }
 
 .navbar .--navbar--center-- {
@@ -281,6 +282,12 @@
   }
 }
 
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>> Login to Konfidential Pop Up <<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

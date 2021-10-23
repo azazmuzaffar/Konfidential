@@ -97,6 +97,26 @@ body {
   }
 }
 
+@media screen and (max-width: 1334px) {
+  /* >>>>>>>> Right <<<<<<< */
+  .--navbar--right-- {
+    form {
+      input {
+        color: $white !important;
+      }
+      .--search-- {
+        svg {
+          &:hover {
+            .icon {
+              fill: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

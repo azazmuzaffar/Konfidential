@@ -106,6 +106,7 @@ $lightGolden: rgba(255, 255, 255, 0.45);
     letter-spacing: normal;
     color: $golden;
     margin-bottom: 16px;
+    text-align: left;
   }
   /* Paragraph */
   P {
@@ -132,7 +133,12 @@ $lightGolden: rgba(255, 255, 255, 0.45);
     text-align: center;
     color: $black;
     padding: 11px 30px;
-    background: $golden;
+    background: $golden06;
+    transition: 0.3s;
+    &:hover {
+      background: $golden;
+      transition: 0.3s;
+    }
   }
 }
 

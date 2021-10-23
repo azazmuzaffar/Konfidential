@@ -71,7 +71,7 @@
     top: unset;
     bottom: 76px;
   }
-  .--banner-- .--banner-content-- h1 br {
+  .--banner-- .--banner-content-- h2 br {
     display: none;
   }
 }
@@ -162,10 +162,10 @@
 
 .--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li {
   margin-bottom: 10px;
-  /* >>>>>>>> City/Location <<<<<<< */
+  /* State */
 }
 
-.--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li:first-child {
+.--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li h2 {
   font-family: "Spectral";
   font-size: 24px;
   font-weight: 300;
@@ -179,6 +179,11 @@
 }
 
 .--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li a {
+  text-decoration: none;
+  /* City */
+}
+
+.--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li a h3 {
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
@@ -186,12 +191,11 @@
   line-height: 1.88;
   letter-spacing: normal;
   color: #ffffff;
-  text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li a:hover {
+.--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li a h3:hover {
   color: #c9a882;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -217,7 +221,7 @@
   .--all--locations-- .container .row .col-lg-3:nth-last-of-type(-n + 2) {
     margin-bottom: 0;
   }
-  .--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li:first-child {
+  .--all--locations-- .container .row .col-lg-3 .--lists-of-locations-- ul li h2 {
     font-size: 20px;
   }
 }

@@ -149,7 +149,7 @@
   margin-bottom: 19px;
 }
 
-.escort-details .container .-right .escort-about .-location p {
+.escort-details .container .-right .escort-about .-location h2 {
   font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
@@ -159,7 +159,7 @@
   color: #c9a882;
 }
 
-.escort-details .container .-right .escort-about .-location p span {
+.escort-details .container .-right .escort-about .-location h2 span {
   text-transform: uppercase;
   font-weight: 600;
 }

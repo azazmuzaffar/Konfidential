@@ -53,6 +53,16 @@ body {
   fill: #000000;
 }
 
+@media screen and (max-width: 1334px) {
+  /* >>>>>>>> Right <<<<<<< */
+  .--navbar--right-- form input {
+    color: #ffffff !important;
+  }
+  .--navbar--right-- form .--search-- svg:hover .icon {
+    fill: #ffffff;
+  }
+}
+
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */

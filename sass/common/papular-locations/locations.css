@@ -35,7 +35,7 @@
   /* >>>> View All Button <<<< */
 }
 
-.--locations-- .container h1 {
+.--locations-- .container h2 {
   font-family: "Spectral", serif;
   font-size: 58px;
   font-weight: 200;
@@ -146,7 +146,7 @@
     /* >>>> All Locations (City) <<<< */
     /* >>>> Paragraph <<<< */
   }
-  .--locations-- .container h1 {
+  .--locations-- .container h2 {
     font-size: 35px;
     font-weight: 300;
   }
@@ -207,7 +207,7 @@
     /* >>>> Line <<<< */
     /* >>>> All Locations (City) <<<< */
   }
-  .--locations-- .container h1 br {
+  .--locations-- .container h2 br {
     display: none;
   }
   .--locations-- .container .--line-- {

@@ -61,7 +61,7 @@ $navigations: 14px;
   z-index: 99;
   width: 90%;
 }
-.--banner-content-- h1 {
+.--banner-content-- h2 {
   font-family: "Spectral";
   font-size: 45px;
   font-weight: 300;
@@ -73,7 +73,7 @@ $navigations: 14px;
   color: #ffffff;
 }
 @media screen and (max-width: 620px) {
-  .--banner-content-- h1 {
+  .--banner-content-- h2 {
     font-size: 35px;
   }
 }

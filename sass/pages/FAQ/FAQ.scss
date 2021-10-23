@@ -103,6 +103,11 @@ $messageError: #ce3737;
           font-size: 24px;
           font-weight: 300;
           color: $golden;
+
+          label {
+            margin: 0;
+            cursor: pointer;
+          }
           &::after {
             top: 8px;
           }

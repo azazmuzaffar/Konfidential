@@ -95,7 +95,7 @@ $lightGolden: rgba(255, 255, 255, 0.45);
     .--banner-content-- {
       top: unset;
       bottom: 76px;
-      h1 {
+      h2 {
         br {
           display: none;
         }
@@ -184,7 +184,8 @@ $lightGolden: rgba(255, 255, 255, 0.45);
             /* >>>>>>>> Each li element <<<<<<< */
             li {
               margin-bottom: 10px;
-              &:first-child {
+              /* State */
+              h2 {
                 font-family: "Spectral";
                 font-size: 24px;
                 font-weight: 300;
@@ -196,20 +197,22 @@ $lightGolden: rgba(255, 255, 255, 0.45);
                 margin-bottom: 20px;
                 text-transform: uppercase;
               }
-              /* >>>>>>>> City/Location <<<<<<< */
               a {
-                font-size: 16px;
-                font-weight: normal;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1.88;
-                letter-spacing: normal;
-                color: $white;
                 text-decoration: none;
-                transition: 0.3s;
-                &:hover {
-                  color: $golden;
+                /* City */
+                h3 {
+                  font-size: 16px;
+                  font-weight: normal;
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.88;
+                  letter-spacing: normal;
+                  color: $white;
                   transition: 0.3s;
+                  &:hover {
+                    color: $golden;
+                    transition: 0.3s;
+                  }
                 }
               }
             }
@@ -243,7 +246,7 @@ $lightGolden: rgba(255, 255, 255, 0.45);
           .--lists-of-locations-- {
             ul {
               li {
-                &:first-child {
+                h2 {
                   font-size: 20px;
                 }
               }

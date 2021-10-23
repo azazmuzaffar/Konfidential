@@ -86,6 +86,11 @@
   color: #c9a882;
 }
 
+.--about--us-- .container .--frequently--asked--question-- .--f-a-q-- .--question-- label {
+  margin: 0;
+  cursor: pointer;
+}
+
 .--about--us-- .container .--frequently--asked--question-- .--f-a-q-- .--question--::after {
   top: 8px;
 }

@@ -89,6 +89,7 @@
   letter-spacing: normal;
   color: #c9a882;
   margin-bottom: 16px;
+  text-align: left;
 }
 
 .--banner-content-- P {
@@ -115,7 +116,15 @@
   text-align: center;
   color: #000000;
   padding: 11px 30px;
+  background: #c9a882d2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.--banner-content-- a:hover {
   background: #c9a882;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 1024px) {
