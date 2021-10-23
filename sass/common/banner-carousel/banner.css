@@ -15,15 +15,18 @@
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Banner <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-.carousel {
+.-banner-slider .slide {
   position: relative;
-  overflow: hidden;
-  /* >>>> Gradient Overlay <<<< */
-  /* >>>> Carousel Indicators <<<< */
-  /* >>>> Content top of Carousel <<<< */
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+  /* Slide Overlay */
+  /* Slide Image */
+  /* Slide Content */
 }
 
-.carousel .--overlay-- {
+.-banner-slider .slide .-slide-overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -33,23 +36,12 @@
   pointer-events: none;
 }
 
-.carousel .carousel-indicators {
-  margin-bottom: 38px;
+.-banner-slider .slide .-slide-img-bg img {
+  width: 100%;
+  height: auto;
 }
 
-.carousel .carousel-indicators li {
-  width: 31px;
-  height: 5px;
-  margin: 0 11px 0 0;
-  border-radius: 1.5px;
-  background-color: rgba(255, 255, 255, 0.45);
-}
-
-.carousel .carousel-indicators li.active {
-  background-color: #c9a882;
-}
-
-.carousel .--banner--content-- {
+.-banner-slider .slide .-slide-content {
   position: absolute;
   top: 58.5%;
   left: 50%;
@@ -60,7 +52,7 @@
   z-index: 9;
 }
 
-.carousel .--banner--content-- h2 {
+.-banner-slider .slide .-slide-content h2 {
   font-family: "Spectral", serif;
   font-size: 3.01vw;
   font-weight: 200;
@@ -72,11 +64,11 @@
   margin-bottom: 5px;
 }
 
-.carousel .--banner--content-- h2 span {
+.-banner-slider .slide .-slide-content h2 span {
   color: #c9a882;
 }
 
-.carousel .--banner--content-- .--line-- {
+.-banner-slider .slide .-slide-content .--line-- {
   width: 348px;
   height: 2px;
   margin: 0 auto;
@@ -84,7 +76,7 @@
   background-color: #c9a882;
 }
 
-.carousel .--banner--content-- p {
+.-banner-slider .slide .-slide-content p {
   font-size: var(--paragraph);
   font-weight: normal;
   font-stretch: normal;
@@ -95,100 +87,109 @@
   color: #ffffff;
 }
 
+/* Custom Slick Dots Start */
+.slick-dots li button {
+  display: none;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 50px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 31px;
+  height: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 0 6px;
+  cursor: pointer;
+  border-radius: 1.5px;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.slick-dots li.slick-active {
+  background: #c9a882;
+}
+
 @media screen and (max-width: 1850px) {
-  .carousel .--banner--content-- {
-    /* removing br so text can wrap */
-  }
-  .carousel .--banner--content-- p br {
+  .-banner-slider .-slide-content p br {
     display: none;
   }
 }
 
 @media screen and (max-width: 1334px) {
-  .carousel {
-    position: relative;
-    height: 901px;
-    /* >>>> Carousel Indicators <<<< */
-    /* >>>> Crousel Image <<<< */
-    /* >>>> Content top of Carousel <<<< */
+  .-banner-slider .slide {
+    /* Slide Image */
+    /* Slide Content */
   }
-  .carousel .carousel-indicators {
-    margin-bottom: 90px;
+  .-banner-slider .slide .-slide-img-bg img {
+    overflow: hidden;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 920px;
   }
-  .carousel .carousel-inner .carousel-item img {
-    width: 1920px !important;
-    background-position: center center;
-    height: 901px;
-  }
-  .carousel .--banner--content-- {
+  .-banner-slider .slide .-slide-content {
     width: 100%;
-    padding: 0px 18% 0px 18%;
     top: 50%;
+    padding: 0px 18% 0px 18%;
   }
-  .carousel .--banner--content-- h2 {
-    font-size: 40px;
-  }
-  .carousel .--banner--content-- .--line-- {
-    background-color: #979797;
-  }
-  .carousel .--banner--content-- p br {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .carousel {
-    /* >>>> Gradient Overlay <<<< */
-    /* >>>> Crousel Image <<<< */
-    /* >>>> Content top of Carousel <<<< */
-  }
-  .carousel .--overlay-- {
-    height: 100vh;
-  }
-  .carousel .carousel-inner .carousel-item img {
-    width: 800px !important;
-    height: 100vh;
-  }
-  .carousel .--banner--content-- {
-    top: 50.5%;
-    padding: 0px 13% 0px 13%;
-  }
-  .carousel .--banner--content-- h2 {
+  .-banner-slider .slide .-slide-content h2 {
     font-size: 45px;
-    margin-bottom: 20px !important;
   }
-  .carousel .--banner--content-- .--line-- {
-    background-color: #979797;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .carousel {
-    height: 661px;
-    /* >>>> Carousel Indicators <<<< */
-    /* >>>> Content top of Carousel <<<< */
-  }
-  .carousel .carousel-indicators {
-    margin-bottom: 38px;
-  }
-  .carousel .--banner--content-- {
-    top: 52%;
-    padding: 0px 20px 0px 20px;
-  }
-  .carousel .--banner--content-- h2 {
-    line-height: 1.22;
-    margin-bottom: 16px !important;
-  }
-  .carousel .--banner--content-- .--line-- {
-    width: 218px;
+  /* Slick Dots */
+  .slick-dots {
+    bottom: 96px;
   }
 }
 
-@media screen and (max-width: 575px) {
-  /* >>>> Crousel Image <<<< */
-  .carousel-inner .carousel-item img {
-    max-width: 100% !important;
-    height: 661px !important;
+@media screen and (max-width: 768px) {
+  .-banner-slider .slide {
+    /* Slide Content */
+  }
+  .-banner-slider .slide .-slide-content {
+    padding: 0px 99px 0px 99px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .-banner-slider .slide {
+    /* Slide Image */
+  }
+  .-banner-slider .slide .-slide-img-bg img {
+    height: 750px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .-banner-slider .slide {
+    /* Slide Image */
+    /* Slide Content */
+  }
+  .-banner-slider .slide .-slide-img-bg img {
+    height: 667px;
+  }
+  .-banner-slider .slide .-slide-content {
+    top: 55%;
+    padding: 0px 20px;
+  }
+  .-banner-slider .slide .-slide-content h2 {
+    line-height: 60px;
+    margin-bottom: 10px;
+  }
+  .-banner-slider .slide .-slide-content .--line-- {
+    width: 65%;
+    margin-bottom: 15px;
+  }
+  /* Slick Dots */
+  .slick-dots {
+    bottom: 46px;
   }
 }
 

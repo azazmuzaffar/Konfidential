@@ -22,6 +22,9 @@
                Leiria, Lisboa, Madeira, Montijo, Odivelas, Oeiras, Porto, Santarém, Setúbal, Sintra, Vila Real e Viseu."
     />
 
+    <!-- >>> Slick Slider <<< -->
+    <link href="./slick/slick.css" rel="stylesheet" />
+
     <!-- >>> Fontawsome 5 | Used for icons <<< -->
     <link href="./font-awesome/css/all.css" rel="stylesheet" />
 
@@ -212,61 +215,60 @@
     <!-- >>>>>>>>>> Banner Carousel <<<<<<<<< -->
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
 
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-      <!-- >>>>>>>> Gradient Overlay <<<<<<< -->
-      <div class="--overlay--"></div>
+    <div class="-banner-slider">
+      <!-- All Slides -->
 
-      <!-- >>>>>>> Slider Indicators <<<<<<< -->
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      </ol>
-
-      <!-- >>>>>>>> Carousel <<<<<<< -->
-      <div class="carousel-inner">
-        <!-- >>>> ::active by default <<<<<-->
-
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-        <!-- >>>> Carousel # 1 <<<< -->
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-
-        <div class="carousel-item active">
+      <!-- Slide # 1 - Start -->
+      <div class="slide">
+        <!-- Slide Overlay -->
+        <div class="-slide-overlay"></div>
+        <!-- Slide Image -->
+        <div class="-slide-img-bg">
           <picture>
-            <source media="(max-width:500px)" srcset="./images/home/banner--slide--1.2.jpg" />
-            <source media="(max-width:800px)" srcset="./images/home/banner--slide--1.1.jpg" />
-            <img class="d-block w-100" src="./images/home/banner--slide--1.jpg" alt="First slide" />
+            <source media="(max-width:375px)" srcset="./images/home/banner--slide--1.2.jpg" />
+            <source media="(max-width:768px)" srcset="./images/home/banner--slide--1.1.jpg" />
+            <img src="./images/home/banner--slide--1.jpg" alt="First slide" />
           </picture>
         </div>
-        <!-- >>>>>>>>>>>> End <<<<<<<<<<<< -->
+        <!-- Slide Content -->
+        <div class="-slide-content">
+          <h2>Bem-vindo à <span>Konfidencial</span>.com</h2>
+          <div class="--line--"></div>
+          <p>
+            Acompanhantes de Luxo no Algarve, Almada, Aveiro, Açores, Braga, Carnaxide, Cascais,
+            Coimbra, Évora, Guimarães, <br />
+            Leiria, Lisboa, Madeira, Montijo, Odivelas, Oeiras, Porto, Santarém, Setúbal, Sintra,
+            Vila Real e Viseu.
+          </p>
+        </div>
+      </div>
+      <!-- End - Slide # 1 -->
 
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-        <!-- >>>> Carousel # 2 <<<< -->
-        <!-- >>>>>>>>>>>><<<<<<<<<< -->
-
-        <div class="carousel-item">
+      <!-- Slide # 2 - Start -->
+      <div class="slide">
+        <!-- Slide Overlay -->
+        <div class="-slide-overlay"></div>
+        <!-- Slide Image -->
+        <div class="-slide-img-bg">
           <picture>
-            <source media="(max-width:500px)" srcset="./images/home/banner--slide--1.2.jpg" />
-            <source media="(max-width:800px)" srcset="./images/home/banner--slide--1.1.jpg" />
-            <img class="d-block w-100" src="./images/home/banner--slide--1.jpg" alt="First slide" />
+            <source media="(max-width:375px)" srcset="./images/home/banner--slide--1.2.jpg" />
+            <source media="(max-width:768px)" srcset="./images/home/banner--slide--1.1.jpg" />
+            <img src="./images/home/banner--slide--1.jpg" alt="First slide" />
           </picture>
         </div>
-        <!-- >>>>>>>>>>>> End <<<<<<<<<<<< -->
+        <!-- Slide Content -->
+        <div class="-slide-content">
+          <h2>Bem-vindo à <span>Konfidencial</span>.com</h2>
+          <div class="--line--"></div>
+          <p>
+            Acompanhantes de Luxo no Algarve, Almada, Aveiro, Açores, Braga, Carnaxide, Cascais,
+            Coimbra, Évora, Guimarães, <br />
+            Leiria, Lisboa, Madeira, Montijo, Odivelas, Oeiras, Porto, Santarém, Setúbal, Sintra,
+            Vila Real e Viseu.
+          </p>
+        </div>
       </div>
-
-      <!-- >>>>>>> Content Top of Crousel <<<<<<< -->
-      <div class="--banner--content--">
-        <!-- >>>>>>>>>>>> Main Heading <<<<<<<<<<<< -->
-        <h2>Bem-vindo à <span>Konfidencial</span>.com</h2>
-        <!-- >>>>>>>>>>>> Line <<<<<<<<<<<< -->
-        <div class="--line--"></div>
-        <!-- >>>>>>>>>>>> Paragraph <<<<<<<<<<<< -->
-        <p>
-          Acompanhantes de Luxo no Algarve, Almada, Aveiro, Açores, Braga, Carnaxide, Cascais,
-          Coimbra, Évora, Guimarães, <br />
-          Leiria, Lisboa, Madeira, Montijo, Odivelas, Oeiras, Porto, Santarém, Setúbal, Sintra, Vila
-          Real e Viseu.
-        </p>
-      </div>
+      <!-- End - Slide # 2 -->
     </div>
 
     <!-- >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<< -->
@@ -964,6 +966,28 @@
 
     <!-- >>> Bootstrap v5.0.2 | Front End Framework <<< -->
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- >>> Slick Slider <<< -->
+    <script src="../slick/slick.min.js"></script>
+
+    <script>
+      /* Banner Carousel */
+      var $slickEl = $(".-banner-slider");
+
+      $slickEl.slick({
+        centerMode: true,
+        centerPadding: "0px",
+        slidesToShow: 1,
+        focusOnSelect: true,
+        dots: true,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+      });
+      /* End */
+    </script>
 
     <!-- >>> CUSTOM JS <<< -->
     <script src="./js/app.js"></script>

@@ -90,6 +90,11 @@ $(document).mouseup(function (e) {
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
+/* Making First input "Focused" by default */
+$(document).ready(function () {
+  $("input:first").focus();
+});
+
 /* >>>>>>>> It will show/hide mobile menu <<<<<<<<< */
 $(document).ready(function () {
   $(".open-menu").on("click", function () {
@@ -102,7 +107,7 @@ $(document).ready(function () {
   $(".open-search").on("click", function () {
     $(".--navbar--right--").addClass("active");
     $(".--navbar--left--").addClass("fix-it");
-    $("input").focus();
+    $("input:first").focus();
   });
 });
 

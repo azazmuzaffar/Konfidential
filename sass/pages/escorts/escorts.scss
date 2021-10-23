@@ -503,7 +503,8 @@ $messageError: #ce3737;
 
 /* Custom Slick Dots Start */
 .slick-dots li button {
-  display: none;
+  border: none;
+  outline: none;
 }
 .slick-dots {
   position: absolute;

@@ -239,7 +239,6 @@ $navigations: 14px;
       }
       .nav-item.login {
         text-align: right;
-
         .nav-link {
           svg {
             display: block;
@@ -357,7 +356,7 @@ $navigations: 14px;
         position: relative;
         width: 100% !important;
         border-color: #c9a882;
-        padding: 0px 30px 0px 5px;
+        padding: 0px 30px 0px 0px;
         text-decoration: none;
       }
       .--search-- {
