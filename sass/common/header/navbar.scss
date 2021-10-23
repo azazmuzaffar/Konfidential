@@ -52,7 +52,7 @@ $navigations: 14px;
     cursor: pointer;
   }
 
-  /* >>>>>> Left <<<<<< */
+  /* Left */
   .--navbar--left-- {
     width: 28%;
     padding-left: 180px;
@@ -67,9 +67,7 @@ $navigations: 14px;
         display: none;
       }
     }
-
-    /* >>>> Language Dropdown <<<< */
-    /* >>>> By default display/none <<<< */
+    /* Language Dropdown */
     .--languages-- {
       display: none;
       position: absolute;
@@ -95,16 +93,16 @@ $navigations: 14px;
         padding-left: 5px;
       }
     }
-    /* >>>> Shown on Hover <<<< */
     .nav-item.active {
       .--languages-- {
         display: block;
         transition: 0.5s;
+        box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.08);
       }
     }
   }
 
-  /* >>>>>> Center <<<<<< */
+  /* Center */
   .--navbar--center-- {
     text-align: center;
     width: 70%;
@@ -112,6 +110,9 @@ $navigations: 14px;
       span {
         display: none;
       }
+    }
+    .--menu-- {
+      display: none;
     }
     .--center--list-- {
       width: fit-content;
@@ -139,17 +140,31 @@ $navigations: 14px;
     }
   }
 
-  /* >>>>>> Search Form <<<<< */
-  form {
-    display: flex;
-  }
-
-  /* >>>>>> Right <<<<<< */
+  /* Right */
   .--navbar--right-- {
     width: 30%;
     padding-top: 12px;
     padding-right: 61px;
     margin-top: -67px;
+    form {
+      display: flex;
+    }
+    h6 {
+      display: none;
+      font-size: 35px;
+      font-weight: 300;
+      font-family: "Spectral";
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.25;
+      letter-spacing: normal;
+      text-align: center;
+      color: #c9a882;
+      position: absolute;
+      top: 23%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
     input {
       border: none;
       outline: none;
@@ -159,6 +174,13 @@ $navigations: 14px;
       margin-right: 14px;
       color: $white;
     }
+    button {
+      background: transparent;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+    /* Icon */
     .--search-- {
       svg .icon {
         fill: $golden;
@@ -169,16 +191,19 @@ $navigations: 14px;
         transition: 0.5s;
       }
     }
+    .--close-search-- {
+      display: none;
+    }
   }
 }
 
 @media screen and (max-width: 1850px) {
   .navbar {
-    /* >>>> Left <<<< */
+    /* Left */
     .--navbar--left-- {
       padding-left: 40px;
     }
-    /* >>>> Right <<<< */
+    /* Right */
     .--navbar--right-- {
       padding-right: 40px;
       input {
@@ -188,24 +213,25 @@ $navigations: 14px;
   }
 }
 
-/* Mobile Navbar start here */
-/* By changing/reducing the max-width here */
-/* You can set the start of the Mobile Navbar */
+/* Mobile Menu start here */
+/* Mobile Menu will only be visible when */
+/* active class is added to the navbar */
 
 @media screen and (max-width: 1334px) {
-  /* >>>> Mobile Navbar <<<< */
+  /* >>>> Mobile Menu <<<< */
+
+  /* Setting up Menu Icons */
+  /* Arranging the positions of left/center/right */
   .navbar {
     display: block;
     height: fit-content;
     padding: 0px;
 
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
+    /* Left */
     .--navbar--left-- {
       margin-top: 0px;
       width: 100%;
       padding: 0px 28px 0px 28px;
-
-      /* >>>> Setting up Login and Language selecter position <<<< */
       .nav-item.login,
       .nav-item.lang {
         display: inline-block;
@@ -221,14 +247,18 @@ $navigations: 14px;
           }
         }
       }
+      &.fix-it {
+        position: fixed;
+        background: $black;
+        z-index: 9999;
+      }
     }
 
-    /* >>>> Nav Center becomes Middle <<<< */
+    /* Center */
     .--navbar--center-- {
       width: 100%;
       text-align: left;
       position: relative;
-
       .--logo-- {
         position: relative;
         padding: 13px 28px 13px 38px;
@@ -241,26 +271,28 @@ $navigations: 14px;
           }
         }
       }
-
-      /* >>>> List of Navigations <<<< */
       .--center--list-- {
         display: none;
         width: 100%;
       }
 
-      /* >>>> Responsible for triggering Mobile Nav <<<< */
+      /* Open/Close Search */
       .--menu-- {
         cursor: pointer;
         position: absolute;
         top: 50%;
         right: 38px;
         transform: translateY(-50%);
+        display: flex;
         .--nav--toggle-- {
           position: relative;
           width: 50px;
           height: 50px;
           border-radius: 50%;
           border: 1px solid $golden;
+          &.open-search {
+            margin-right: 13px;
+          }
           .toggle {
             width: fit-content;
             position: absolute;
@@ -286,38 +318,51 @@ $navigations: 14px;
                 transition: 0.5s;
               }
             }
+            svg {
+              .icon {
+                fill: $golden;
+              }
+            }
           }
         }
       }
     }
 
-    /* >>>> Search is now set to absolute  <<<< */
-    /* To show it on the top of middle search along with menu*/
+    /* Right */
     .--navbar--right-- {
-      height: fit-content;
-      margin-top: 0px;
+      display: none !important;
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      top: 40px;
+      left: 0;
+      bottom: 0 !important;
+      background: $bgcolor;
+      margin: 0;
       padding: 0;
-      position: absolute;
-      bottom: 32px;
-      right: 105px;
-      width: fit-content;
+      h6 {
+        display: block;
+      }
+      form {
+        display: block;
+        position: absolute;
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60%;
+        margin: 0;
+        padding: 0;
+      }
       input {
-        display: none;
+        position: relative;
+        width: 100% !important;
+        border-color: #c9a882;
+        padding: 0px 30px 0px 5px;
       }
       .--search-- {
-        position: relative;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 1px solid $golden;
-        svg {
-          display: block;
-          width: fit-content;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
+        position: absolute;
+        bottom: 35px;
+        right: 0;
         &:hover {
           svg {
             .icon {
@@ -326,10 +371,46 @@ $navigations: 14px;
           }
         }
       }
+
+      /* Close Search */
+      .--close-search-- {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 58px;
+        right: 38px;
+        transform: translateY(-50%);
+        .--nav--toggle-- {
+          position: relative;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          border: 1px solid $golden;
+          .toggle {
+            width: fit-content;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            svg {
+              width: 16px;
+              fill: $golden;
+            }
+          }
+        }
+      }
+
+      /* Open Search */
+      &.active {
+        display: block !important;
+      }
     }
   }
 
-  /* >>>> Mobile nav will be visible by adding active class <<<< */
+  /* >>>> Active Class Added <<<< */
+  /* >>>> Mobile Menu iss visible now <<<< */
+
+  /* Navbar - Fixed */
   .navbar.active {
     display: block;
     height: fit-content;
@@ -339,7 +420,7 @@ $navigations: 14px;
     overflow: scroll;
     background: $white;
 
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
+    /* Left - Fixed */
     .--navbar--left-- {
       background: $black;
       position: fixed;
@@ -348,7 +429,7 @@ $navigations: 14px;
       z-index: 999999;
     }
 
-    /* >>>> Nav Center becomes Middle <<<< */
+    /* Center - Fixed */
     .--navbar--center-- {
       width: 100%;
       text-align: left;
@@ -356,8 +437,6 @@ $navigations: 14px;
       height: calc(100vh - 40px);
       background: $white;
       z-index: 99;
-
-      /* >>>> Logo becomes Text "MENU" <<<< */
       .--logo-- {
         position: fixed;
         background: $white;
@@ -386,16 +465,14 @@ $navigations: 14px;
           }
         }
       }
-
-      /* >>>> List with the dropdowns and navigations <<<< */
       .--center--list-- {
         display: block;
         width: 100%;
         padding-bottom: 15px !important;
         height: fit-content;
         position: relative;
-        top: 135px;
-
+        padding: 0px 50px;
+        top: 176px;
         .nav-item {
           .nav-link {
             padding: 0;
@@ -414,7 +491,6 @@ $navigations: 14px;
               display: block;
             }
           }
-          /* >>>> Dropdown List <<<< */
           ul {
             list-style: none;
             margin: 0;
@@ -423,8 +499,6 @@ $navigations: 14px;
             max-height: 0;
             transition: 0.35s ease-in-out;
             display: block;
-
-            /* >>>> Dropdown List - items <<<< */
             li {
               a {
                 font-size: 16px;
@@ -462,10 +536,13 @@ $navigations: 14px;
         }
       }
 
-      /* >>>> Menu becomes Close on Mobile Nav "active "<<<< */
+      /* Close Search */
       .--menu-- {
         .--nav--toggle-- {
           border: 1px solid $black;
+          &.open-search {
+            display: none;
+          }
           .toggle {
             span {
               background: $black;
@@ -487,23 +564,17 @@ $navigations: 14px;
         }
       }
     }
-
-    /* >>>> Remove search when mobile nav is "active" <<<< */
-    .--navbar--right-- {
-      display: none;
-      opacity: 0;
-    }
   }
 }
 
 @media screen and (max-width: 620px) {
   .navbar {
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
+    /* Left */
     .--navbar--left-- {
       padding: 0px 10px 0px 10px;
     }
 
-    /* >>>> Nav Center becomes Middle <<<< */
+    /* Center */
     .--navbar--center-- {
       .--logo-- {
         padding: 10px 20px 10px 20px;
@@ -516,30 +587,38 @@ $navigations: 14px;
       .--center--list-- {
         display: none;
         width: 100%;
+        top: 135px !important;
       }
-
-      /* >>>> Responsible for triggering navbar <<<< */
       .--menu-- {
         right: 20px;
       }
     }
 
-    /* >>>> Search is now set to absolute  <<<< */
-    /* To show it on the top of middle search along with menu*/
+    /* Right */
     .--navbar--right-- {
-      right: 85px;
-      bottom: 25px;
+      h6 {
+        top: 27%;
+        font-size: 24px;
+      }
+      form {
+        top: 42%;
+        width: 80%;
+      }
+      .--close-search-- {
+        top: 49px;
+        right: 20px;
+      }
     }
   }
 
-  /* >>>> Mobile nav will be visible by adding active class <<<< */
+  /* Mobile menu is VISIBLE */
   .navbar.active {
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
+    /* left */
     .--navbar--left-- {
       padding: 0px 10px 0px 10px;
     }
 
-    /* >>>> Nav Center becomes Middle <<<< */
+    /* Center */
     .--navbar--center-- {
       .--logo-- {
         a {
@@ -547,8 +626,6 @@ $navigations: 14px;
           padding: 28px 0px !important;
         }
       }
-
-      /* >>>> Nav Center becomes Middle <<<< */
       .--center--list-- {
         padding: 0px 20px;
         margin: 39px 0px 0px 0px;
@@ -557,7 +634,7 @@ $navigations: 14px;
   }
 }
 
-/* New Functionality - Pages Direction */
+/* New Functionality - Pages Directions */
 
 .navbar {
   .--navbar--center-- {

@@ -27,10 +27,9 @@
   display: flex;
   overflow: hidden;
   /* >>>> Navigations <<<< */
-  /* >>>>>> Left <<<<<< */
-  /* >>>>>> Center <<<<<< */
-  /* >>>>>> Search Form <<<<< */
-  /* >>>>>> Right <<<<<< */
+  /* Left */
+  /* Center */
+  /* Right */
 }
 
 .navbar .nav-link {
@@ -52,9 +51,7 @@
   padding-left: 180px;
   margin-top: -65px;
   position: relative;
-  /* >>>> Language Dropdown <<<< */
-  /* >>>> By default display/none <<<< */
-  /* >>>> Shown on Hover <<<< */
+  /* Language Dropdown */
 }
 
 .navbar .--navbar--left-- .nav-link {
@@ -104,6 +101,8 @@
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.08);
 }
 
 .navbar .--navbar--center-- {
@@ -112,6 +111,10 @@
 }
 
 .navbar .--navbar--center-- a span {
+  display: none;
+}
+
+.navbar .--navbar--center-- .--menu-- {
   display: none;
 }
 
@@ -143,17 +146,36 @@
   color: #ffffff;
 }
 
-.navbar form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .navbar .--navbar--right-- {
   width: 30%;
   padding-top: 12px;
   padding-right: 61px;
   margin-top: -67px;
+  /* Icon */
+}
+
+.navbar .--navbar--right-- form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .--navbar--right-- h6 {
+  display: none;
+  font-size: 35px;
+  font-weight: 300;
+  font-family: "Spectral";
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #c9a882;
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .navbar .--navbar--right-- input {
@@ -164,6 +186,13 @@
   background: transparent;
   margin-right: 14px;
   color: #ffffff;
+}
+
+.navbar .--navbar--right-- button {
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .navbar .--navbar--right-- .--search-- svg .icon {
@@ -178,10 +207,14 @@
   transition: 0.5s;
 }
 
+.navbar .--navbar--right-- .--close-search-- {
+  display: none;
+}
+
 @media screen and (max-width: 1850px) {
   .navbar {
-    /* >>>> Left <<<< */
-    /* >>>> Right <<<< */
+    /* Left */
+    /* Right */
   }
   .navbar .--navbar--left-- {
     padding-left: 40px;
@@ -194,27 +227,27 @@
   }
 }
 
-/* Mobile Navbar start here */
-/* By changing/reducing the max-width here */
-/* You can set the start of the Mobile Navbar */
+/* Mobile Menu start here */
+/* Mobile Menu will only be visible when */
+/* active class is added to the navbar */
 @media screen and (max-width: 1334px) {
-  /* >>>> Mobile Navbar <<<< */
+  /* >>>> Mobile Menu <<<< */
+  /* Setting up Menu Icons */
+  /* Arranging the positions of left/center/right */
   .navbar {
     display: block;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
     padding: 0px;
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
-    /* >>>> Nav Center becomes Middle <<<< */
-    /* >>>> Search is now set to absolute  <<<< */
-    /* To show it on the top of middle search along with menu*/
+    /* Left */
+    /* Center */
+    /* Right */
   }
   .navbar .--navbar--left-- {
     margin-top: 0px;
     width: 100%;
     padding: 0px 28px 0px 28px;
-    /* >>>> Setting up Login and Language selecter position <<<< */
   }
   .navbar .--navbar--left-- .nav-item.login,
   .navbar .--navbar--left-- .nav-item.lang {
@@ -228,12 +261,16 @@
     display: block;
     display: unset;
   }
+  .navbar .--navbar--left--.fix-it {
+    position: fixed;
+    background: #000000;
+    z-index: 9999;
+  }
   .navbar .--navbar--center-- {
     width: 100%;
     text-align: left;
     position: relative;
-    /* >>>> List of Navigations <<<< */
-    /* >>>> Responsible for triggering Mobile Nav <<<< */
+    /* Open/Close Search */
   }
   .navbar .--navbar--center-- .--logo-- {
     position: relative;
@@ -256,6 +293,9 @@
     right: 38px;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   .navbar .--navbar--center-- .--menu-- .--nav--toggle-- {
     position: relative;
@@ -263,6 +303,9 @@
     height: 50px;
     border-radius: 50%;
     border: 1px solid #c9a882;
+  }
+  .navbar .--navbar--center-- .--menu-- .--nav--toggle--.open-search {
+    margin-right: 13px;
   }
   .navbar .--navbar--center-- .--menu-- .--nav--toggle-- .toggle {
     width: -webkit-fit-content;
@@ -295,31 +338,68 @@
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
+  .navbar .--navbar--center-- .--menu-- .--nav--toggle-- .toggle svg .icon {
+    fill: #c9a882;
+  }
   .navbar .--navbar--right-- {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-top: 0px;
+    display: none !important;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    bottom: 0 !important;
+    background: #121212;
+    margin: 0;
     padding: 0;
+    /* Close Search */
+    /* Open Search */
+  }
+  .navbar .--navbar--right-- h6 {
+    display: block;
+  }
+  .navbar .--navbar--right-- form {
+    display: block;
     position: absolute;
-    bottom: 32px;
-    right: 105px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    top: 38%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 60%;
+    margin: 0;
+    padding: 0;
   }
   .navbar .--navbar--right-- input {
-    display: none;
+    position: relative;
+    width: 100% !important;
+    border-color: #c9a882;
+    padding: 0px 30px 0px 5px;
   }
   .navbar .--navbar--right-- .--search-- {
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+  }
+  .navbar .--navbar--right-- .--search--:hover svg .icon {
+    fill: #c9a882;
+  }
+  .navbar .--navbar--right-- .--close-search-- {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 58px;
+    right: 38px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .navbar .--navbar--right-- .--close-search-- .--nav--toggle-- {
     position: relative;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 1px solid #c9a882;
   }
-  .navbar .--navbar--right-- .--search-- svg {
-    display: block;
+  .navbar .--navbar--right-- .--close-search-- .--nav--toggle-- .toggle {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -329,10 +409,16 @@
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
-  .navbar .--navbar--right-- .--search--:hover svg .icon {
+  .navbar .--navbar--right-- .--close-search-- .--nav--toggle-- .toggle svg {
+    width: 16px;
     fill: #c9a882;
   }
-  /* >>>> Mobile nav will be visible by adding active class <<<< */
+  .navbar .--navbar--right--.active {
+    display: block !important;
+  }
+  /* >>>> Active Class Added <<<< */
+  /* >>>> Mobile Menu iss visible now <<<< */
+  /* Navbar - Fixed */
   .navbar.active {
     display: block;
     height: -webkit-fit-content;
@@ -343,9 +429,8 @@
     height: 100%;
     overflow: scroll;
     background: #ffffff;
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
-    /* >>>> Nav Center becomes Middle <<<< */
-    /* >>>> Remove search when mobile nav is "active" <<<< */
+    /* Left - Fixed */
+    /* Center - Fixed */
   }
   .navbar.active .--navbar--left-- {
     background: #000000;
@@ -361,9 +446,7 @@
     height: calc(100vh - 40px);
     background: #ffffff;
     z-index: 99;
-    /* >>>> Logo becomes Text "MENU" <<<< */
-    /* >>>> List with the dropdowns and navigations <<<< */
-    /* >>>> Menu becomes Close on Mobile Nav "active "<<<< */
+    /* Close Search */
   }
   .navbar.active .--navbar--center-- .--logo-- {
     position: fixed;
@@ -402,10 +485,8 @@
     height: -moz-fit-content;
     height: fit-content;
     position: relative;
-    top: 135px;
-  }
-  .navbar.active .--navbar--center-- .--center--list-- .nav-item {
-    /* >>>> Dropdown List <<<< */
+    padding: 0px 50px;
+    top: 176px;
   }
   .navbar.active .--navbar--center-- .--center--list-- .nav-item .nav-link {
     padding: 0;
@@ -435,7 +516,6 @@
     -webkit-transition: 0.35s ease-in-out;
     transition: 0.35s ease-in-out;
     display: block;
-    /* >>>> Dropdown List - items <<<< */
   }
   .navbar.active .--navbar--center-- .--center--list-- .nav-item ul li a {
     font-size: 16px;
@@ -475,6 +555,9 @@
   .navbar.active .--navbar--center-- .--menu-- .--nav--toggle-- {
     border: 1px solid #000000;
   }
+  .navbar.active .--navbar--center-- .--menu-- .--nav--toggle--.open-search {
+    display: none;
+  }
   .navbar.active .--navbar--center-- .--menu-- .--nav--toggle-- .toggle span {
     background: #000000;
     width: 20px;
@@ -495,24 +578,16 @@
     -webkit-transition: 0.5s;
     transition: 0.5s;
   }
-  .navbar.active .--navbar--right-- {
-    display: none;
-    opacity: 0;
-  }
 }
 
 @media screen and (max-width: 620px) {
   .navbar {
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
-    /* >>>> Nav Center becomes Middle <<<< */
-    /* >>>> Search is now set to absolute  <<<< */
-    /* To show it on the top of middle search along with menu*/
+    /* Left */
+    /* Center */
+    /* Right */
   }
   .navbar .--navbar--left-- {
     padding: 0px 10px 0px 10px;
-  }
-  .navbar .--navbar--center-- {
-    /* >>>> Responsible for triggering navbar <<<< */
   }
   .navbar .--navbar--center-- .--logo-- {
     padding: 10px 20px 10px 20px;
@@ -523,24 +598,30 @@
   .navbar .--navbar--center-- .--center--list-- {
     display: none;
     width: 100%;
+    top: 135px !important;
   }
   .navbar .--navbar--center-- .--menu-- {
     right: 20px;
   }
-  .navbar .--navbar--right-- {
-    right: 85px;
-    bottom: 25px;
+  .navbar .--navbar--right-- h6 {
+    top: 27%;
+    font-size: 24px;
   }
-  /* >>>> Mobile nav will be visible by adding active class <<<< */
+  .navbar .--navbar--right-- form {
+    top: 42%;
+    width: 80%;
+  }
+  .navbar .--navbar--right-- .--close-search-- {
+    top: 49px;
+    right: 20px;
+  }
+  /* Mobile menu is VISIBLE */
   .navbar.active {
-    /* >>>> Nav Left becomes Top on Tabs <<<< */
-    /* >>>> Nav Center becomes Middle <<<< */
+    /* left */
+    /* Center */
   }
   .navbar.active .--navbar--left-- {
     padding: 0px 10px 0px 10px;
-  }
-  .navbar.active .--navbar--center-- {
-    /* >>>> Nav Center becomes Middle <<<< */
   }
   .navbar.active .--navbar--center-- .--logo-- a {
     width: -webkit-fit-content !important;
@@ -554,7 +635,7 @@
   }
 }
 
-/* New Functionality - Pages Direction */
+/* New Functionality - Pages Directions */
 .navbar .--navbar--center-- .--page-direction-- {
   margin-top: 15px;
 }

@@ -31,34 +31,6 @@ $(document).mouseup(function (e) {
 });
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-/* >>>>>> Contact Form Submission <<<<< */
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
-
-/* Show confirmation Message */
-$(document).ready(function () {
-  $(".enable-confirmation").on("click", function () {
-    $(".--confirmation-message--").css("display", "block");
-  });
-});
-
-/* Hide confirmation Message */
-$(document).ready(function () {
-  $(".--confirmed--").on("click", function () {
-    $(".--confirmation-message--").css("display", "none");
-  });
-});
-
-/* Close Login Pop Up when click outside the target DIV */
-$(document).mouseup(function (e) {
-  var container = $(".--content--");
-
-  // if the target of the click isn't the container nor a descendant of the container
-  if (!container.is(e.target) && container.has(e.target).length === 0) {
-    $(".--confirmation-message--").css("display", "none");
-  }
-});
-
-/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>> Ads - Make request change <<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
@@ -87,13 +59,58 @@ $(document).mouseup(function (e) {
 });
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+/* >>>>>> Contact Form Submission <<<<< */
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
+
+/* Show confirmation Message */
+$(document).ready(function () {
+  $(".enable-confirmation").on("click", function () {
+    $(".--confirmation-message--").css("display", "block");
+  });
+});
+
+/* Hide confirmation Message */
+$(document).ready(function () {
+  $(".--confirmed--").on("click", function () {
+    $(".--confirmation-message--").css("display", "none");
+  });
+});
+
+/* Close Login Pop Up when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".--content--");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".--confirmation-message--").css("display", "none");
+  }
+});
+
+/* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>> Navbar <<<<<<<<<<<<<< */
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
 
 /* >>>>>>>> It will show/hide mobile menu <<<<<<<<< */
 $(document).ready(function () {
-  $(".--menu--").on("click", function () {
+  $(".open-menu").on("click", function () {
     $(".navbar").toggleClass("active");
+  });
+});
+
+/* >>>>>>>> It will show search menu <<<<<<<<< */
+$(document).ready(function () {
+  $(".open-search").on("click", function () {
+    $(".--navbar--right--").addClass("active");
+    $(".--navbar--left--").addClass("fix-it");
+    $("input").focus();
+  });
+});
+
+/* >>>>>>>> It will hide search menu <<<<<<<<< */
+$(document).ready(function () {
+  $(".close-search").on("click", function () {
+    $(".--navbar--right--").removeClass("active");
+    $(".--navbar--left--").removeClass("fix-it");
   });
 });
 
@@ -104,11 +121,37 @@ $(document).ready(function () {
   });
 });
 
-/* >>>>>>>> It will show hide languages <<<<<<<<< */
+/* >>>>>>>> It will show/hide languages <<<<<<<<< */
 $(document).ready(function () {
   $(".lang").on("click", function () {
     $(this).toggleClass("active");
   });
+});
+
+/* Close languages dropdown when click outside the target DIV */
+$(document).mouseup(function (e) {
+  var container = $(".lang");
+
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    $(".lang").removeClass("active");
+  }
+});
+
+/* It will remove the link from "acompanhantes" on Tablet/Mobile*/
+/* So it can be use to toggle the dropdown */
+function myFunction(x) {
+  if (x.matches) {
+    // If media query matches
+    document.getElementById("removeHref").setAttribute("href", "#find-in");
+  } else {
+    document.getElementById("removeHref").setAttribute("href", "../acompanhantes.html");
+  }
+}
+$(document).ready(function () {
+  var x = window.matchMedia("(max-width: 1334px)");
+  myFunction(x);
+  x.addListener(myFunction);
 });
 
 /* >>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<  */
@@ -207,38 +250,3 @@ $(".-read-more").click(function () {
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>>>>> End <<<<<<<<<<<<<<<<<<<  */
 /* >>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<  */
-
-/* $(".carousel").on("touchstart", function (event) {
-  const xClick = event.originalEvent.touches[0].pageX;
-  $(this).one("touchmove", function (event) {
-    const xMove = event.originalEvent.touches[0].pageX;
-    const sensitivityInPx = 5;
-
-    if (Math.floor(xClick - xMove) > sensitivityInPx) {
-      $(this).carousel("next");
-    } else if (Math.floor(xClick - xMove) < -sensitivityInPx) {
-      $(this).carousel("prev");
-    }
-  });
-  $(this).on("touchend", function () {
-    $(this).off("touchmove");
-  });
-});
- */
-
-function myFunction(x) {
-  if (x.matches) {
-    // If media query matches
-    document.getElementById("removeHref").setAttribute("href", "#find-in");
-  } else {
-    document.getElementById("removeHref").setAttribute("href", "../acompanhantes.html");
-  }
-}
-
-// Call listener function at run time
-
-$(document).ready(function () {
-  var x = window.matchMedia("(max-width: 1334px)");
-  myFunction(x);
-  x.addListener(myFunction);
-});
